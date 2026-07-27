@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation Acte de Mariage Islamique</title>
+    <style>
+        /* --- Styles Généraux --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            -webkit-font-smoothing: antialiased;
+            padding: 16px;
+        }
+
+        /* --- Conteneurs Principal & Alertes --- */
+        .container {
+            max-width: 56rem; /* Equivalent max-w-4xl */
+            margin: 0 auto;
+        }
+
+        .alert-wrapper {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.5rem;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .alert-error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border-color: #fecaca;
+        }
+
+        .alert-success {
+            background-color: #d1fae5;
+            color: #047857;
+            border-color: #a7f3d0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* --- Titres & Typographie --- */
+        .main-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #047857;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #059669;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        /* --- Layout & Grilles (Flexbox & CSS Grid) --- */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-section {
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-box {
+            background-color: rgba(236, 253, 245, 0.4);
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1fae5;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .col-span-full {
+            grid-column: 1 / -1;
+        }
+
+        .space-y-sm > * + * {
+            margin-top: 0.5rem;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Responsive Breakpoint (Tablette & Desktop : min 768px) */
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .col-span-full {
+                grid-column: span 2 / span 2;
+            }
+        }
+
+        /* --- Champs de Saisie & Boutons --- */
+        .form-input {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            outline: none;
+            font-size: 0.875rem;
+            transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+        }
+
+        .form-input:focus {
+            box-shadow: 0 0 0 2px #10b981;
+            border-color: transparent;
+        }
+
+        .form-file-input {
+            width: 100%;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Personnalisation du bouton d'import de fichier */
+        .form-file-input::file-selector-button {
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            background-color: #ecfdf5;
+            color: #047857;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .form-file-input::file-selector-button:hover {
+            background-color: #d1fae5;
+        }
+
+        .form-file-input-sm {
+            font-size: 0.75rem;
+        }
+
+        .form-file-input-sm::file-selector-button {
+            padding: 0.25rem 0.5rem;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+
+        .btn-primary {
+            background-color: #059669;
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            border: none;
+            border-radius: 0.25rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #047857;
+        }
+
+        .btn-large {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Zone d'affichage des messages d'alerte 
+    <div class="container alert-wrapper">
+        <div class="alert {% if message.tags == 'error' %}alert-error{% else %}alert-success{% endif %}">
+        </div>
+    </div>
+
+    <!-- Conteneur principal -->
+    <div class="container card">
+        <h2 class="main-title">Demande d'Acte de Mariage Islamique</h2>
+        
+        <!-- Formulaire 1 : Authentification -->
+        <form method="POST" action="{% url 'formulaire' %}" class="form-group">
+            <input type="hidden" name="action" value="connexion_formulaire">
+
+            <div id="step-inscription" class="step-box">
+                <h3 class="section-title">1. Authentification</h3>
+                <p class="subtitle">Veuillez saisir ci-dessous les données entrées lors de la création du compte d'utilisateur et commencer votre demande.</p>
+                
+                <div class="grid-2">
+                    <div>
+                        <label class="form-label">Votre Adresse E-mail</label>
+                        <input type="email" name="email" placeholder="exemple@email.com" required class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label">Mot de passe</label>
+                        <input type="password" name="password" placeholder="••••••••" required class="form-input">
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn-primary">
+                        Continuer vers le formulaire →
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Formulaire 2 : Informations du Mariage -->
+        <form id="marriageForm" method="POST" action="#" class="form-group">
+            
+            <!-- Section 1 : Couple et Dot -->
+            <div class="form-section">
+                <h3 class="section-title">1. Informations sur le Couple & la Dot</h3>
+                <div class="grid-2">
+                    <div>
+                        <label class="form-label">Nom & Prénom de l'Époux (Selon ID)</label>
+                        <input type="text" name="nom_epoux" required class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label">Nom & Prénom de l'Épouse (Selon ID)</label>
+                        <input type="text" name="nom_epouse" required class="form-input">
+                    </div>
+                    <div class="col-span-full">
+                        <label class="form-label">Détails de la Dot (Mahr)</label>
+                        <input type="text" name="details_dot" placeholder="Ex: 50 000 FCFA et un exemplaire du Saint Coran" required class="form-input">
+                    </div>
+                    <div class="col-span-full">
+                        <label class="form-label">Photo d'identité du couple (Format joint ou individuel)</label>
+                        <input type="file" name="photo_couple" accept="image/*" class="form-file-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2 : Témoins -->
+            <div class="form-section">
+                <h3 class="section-title">2. Les Témoins</h3>
+                <div class="grid-2">
+                    <div class="space-y-sm">
+                        <label class="form-label">Nom & Prénom du Témoin 1</label>
+                        <input type="text" name="nom_temoin1" required class="form-input">
+                        <label class="subtitle">Acte de naissance (PDF/Image)</label>
+                        <input type="file" name="doc_temoin1" class="form-file-input form-file-input-sm">
+                    </div>
+                    <div class="space-y-sm">
+                        <label class="form-label">Nom & Prénom du Témoin 2</label>
+                        <input type="text" name="nom_temoin2" required class="form-input">
+                        <label class="subtitle">Acte de naissance (PDF/Image)</label>
+                        <input type="file" name="doc_temoin2" class="form-file-input form-file-input-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn-primary btn-large">
+                    Générer l'aperçu des informations
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

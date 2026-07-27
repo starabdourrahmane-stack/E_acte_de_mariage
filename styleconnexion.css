@@ -1,0 +1,52 @@
+
+
+.mainconnexion{
+    border: 1px solid white;
+    background-color: aliceblue;
+    border-radius: 12px;
+    width: 50%;
+    box-shadow: 5px 5px 5px rgb(38, 38, 38);
+    padding: 45px;
+    margin: 20px 40px;
+    
+}
+.connexion{
+        background-color: white;
+        width: 200px;
+        padding: 90px;
+        margin-left: 25px;
+        justify-content: center;
+
+}
+.connexion label{
+    font-size: 20px;
+}
+.connexion input{
+    width: 250px;
+}
+.connexion button{
+    margin-top: 25px;
+    background-color: rgb(223, 143, 45);
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.connexion button:hover{
+    background-color: rgb(127, 127, 110);
+    transform: rotate(10deg);
+}
+
+.connexion button a{
+    text-decoration: none;
+    color: white;
+}
+@media(max-width:513px){
+    .mainconnexion.connexion { 
+        width: 250px ;
+        padding: 60px;
+    }
+    
+}
