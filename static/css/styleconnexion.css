@@ -1,0 +1,54 @@
+
+
+
+.mainconnexion{
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px rgb(240, 226, 226);
+    width: 250px;
+    margin-left: 35px;
+    height: 250px;
+    padding: 45px;
+    padding-bottom: 85px;
+    width: 40%;
+    
+}
+.imagesetconnexion{
+    display: flex;
+
+}
+label{
+    font-size: 26px;
+}
+input {
+    width: 50%;
+    font-size: 24px;
+    color: rgba(63, 63, 242, 0.782);
+}
+button{
+    display: flex;
+}
+button{
+    width: 50%;
+    font-size: 20px;
+    background-color:#c76d23be;
+    border-radius: 10px;
+    justify-content: center;
+    transition: 0.5s;
+    transition: 0.5s;
+
+
+}
+ 
+button:hover{
+    background-color: rgb(32, 82, 82);
+}
+
+
+.formul{
+    background-color: white;
+    padding: 15px;
+}
+@media(max-width:768px){
+
+}

@@ -1,0 +1,320 @@
+
+body {
+    background-color: rgba(250, 243, 235, 0.74);
+    margin: 0;
+}
+
+
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.conn{
+    display: flex;
+}
+.title-web a{
+    text-decoration: none;
+    color: #7e5635;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 18px;
+}
+
+.title-web {
+display: flex;
+margin-top: 15px;
+}
+.title-web-2 {
+margin-top: 19px;
+}
+
+.title-web-2 a{
+ text-decoration: none;
+    color: #7e5635;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 18px;
+}
+
+.title-web-2 a{
+    color :rgb(194, 136, 66);
+     border: 1px solide white;
+    padding: 11px;
+    color: white;
+background-color: rgb(213, 168, 96);
+border-radius: 12px;
+transition: 0.5s;
+
+
+}
+.title-web-2 a.Active {
+    transition: 0.5s;
+}
+.title-web-2 a.Active:hover{
+    background-color: rgb(32, 82, 82);
+}
+
+.navbar ul { 
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(48, 34, 7) ;
+    transition: 0.3s;
+    font-weight: 500;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+.navbar ul li a.AMI{
+    font-size: large;
+    color: rgb(185, 114, 22);
+}
+
+.sch{ 
+
+    border:1px solid white; 
+    background-color: rgb(128, 249, 249);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 12px;
+    letter-spacing: 0.05em;
+
+    }
+.badge{
+    text-align: center;
+}
+.Hero{
+    display: flex;
+}
+.contenuhero{
+    margin: 25px 18px;
+
+    
+}
+.MI{
+    color: #7e5635;
+    
+    
+}
+
+.contenuhero h1{
+font-size: 2.55rem;
+
+}
+.certificate-img img{
+    width: 500px;
+    border-radius: 12px;
+    height: 400px;
+margin-left: 80px;
+margin-top: 58px;
+}
+
+
+.Spanstar{
+    text-align: center;
+    color: aliceblue;
+    font-weight: 500;
+    border:1px solid white; 
+    background-color:#7e5635;
+    padding: 12px 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    letter-spacing: 0.05em;
+    }
+.start{
+    margin-top: 25px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.start:hover{
+padding: 18px ;
+}
+.startdemande{
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+}
+.btn-primary{
+    border: 1px solid white;
+    padding: 12px 50px;
+    background-color:#c76d23b6;
+    color: white;
+    border-radius: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 20px rgba(0,0, 0, 0.15);
+    transition: 0.5;
+    margin-right: 18px;
+}
+.btn-primary:hover{
+    color: bisque;
+    transform: scale(1.1);
+}
+    
+.btn-primary a{ 
+text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+.btn-secondary{
+border: 1px solide white;
+border-radius: 12px;
+padding: 12px 45px;
+}
+.btn-secondary a{
+  color: black;
+  font-size: 14px;
+text-decoration: none;
+}
+.procedure{
+    border : 1px solide white;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 255, 255, 0.197);
+    margin: 20px;
+}
+.btn-1{
+    border: 0.1px solid white;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 30px;
+    margin-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.buttons{
+text-align: center;
+}
+.section-montant{
+    border : 1px solid white;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 255, 255, 0.197);
+    margin: 56px 19px;
+}
+.section-montant h2 {
+    text-align: center;
+    color: rgb(126, 47, 47);
+    font-weight: 650;
+    font-size: 40px;
+}
+.section-montant p {
+    text-align: center;
+}
+.apperçu{
+    border: 1px solid white;
+    background-color: #ffff;
+    padding: 25px;
+    margin: 0 150px;
+}
+.afterapperçu{
+    display: flex;
+}
+
+.content-FAQs{
+    border: 1px solid white;
+    padding: 50px 40px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px 18px;
+    box-shadow: 2px 8px 0px rgb(231, 202, 202);
+
+}
+.fotter-bottom-text {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 18px;
+    background-color: rgb(27, 32, 39);
+    color: aliceblue;
+    margin-left: 0;
+    margin-right: 0;
+
+}   
+
+
+
+@media(max-width:768px){
+    .navbar ul { 
+        display: none;
+    }
+    
+    
+    .title-web a{
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .Hero{
+        flex-direction: column ;
+    }
+    .certificate-img{
+        width: 250px;
+    margin-left: -10%;    }
+    .procedure{
+        height: 50%;
+        padding-bottom: 60px;
+
+    }
+    .procedure {
+        margin-top: 0;
+    }
+    .buttons{
+    flex-direction: column;
+    width: 300px;
+    padding: 40px;
+    }
+    .btn-1{
+        width: 250px;
+        padding: 10px;
+        margin-left: 2px;
+    }
+    .apperçu{
+        flex-direction: column;
+        width: 480px;
+        margin-left: 5px;
+    }
+    .afterapperçu{
+    flex-direction: column;
+
+    }
+    .btn-FAQ{
+        padding: 50%;
+        margin-left: -18px;
+        font-size: 20px;
+        margin-bottom: px;
+
+    }
+    .btn-FAQ h3{
+        display: flex;
+        text-align: center;
+    }
+    .content-FAQs{
+    width: 400px;
+    text-align: left;
+    margin: 80px 8%;
+     }
+     
+     .footer-bottom{
+        width: 100%;
+        
+     }
+}
+    
+

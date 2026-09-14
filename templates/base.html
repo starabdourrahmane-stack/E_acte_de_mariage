@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation des Actes de Mariage Islamique</title>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+</head>
+<body>
+{% block content %}
+    <!-- 1. BARRE DE NAVIGATION -->
+    <nav class="navbar">
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+        <ul>
+            <li> <a href="#"> Comment ça marche </a></li>
+            <li> <a href="#"> Coût et délais </a></li>
+            <li> <a href="#"> FAQ </a></li>
+
+        </ul>
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}">Connexion </a>
+        </div>
+    </nav>
+    <div class="badge">
+        <span class="sch"> sécurisé & conforme à la sharia </span>
+    </div>
+{% endblock content %}
+</body>
+</html>

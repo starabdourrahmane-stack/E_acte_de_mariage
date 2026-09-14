@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation des Actes de Mariage Islamique</title>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styleconnexion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+   
+</head>
+<body>
+      <nav class="navbar">
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+        <ul>
+            <li> <a href="#"> Comment ça marche </a></li>
+            <li> <a href="#"> Coût et délais </a></li>
+            <li> <a href="#"> FAQ </a></li>
+
+        </ul>
+        <div class="title-web-2"> <a class="Active" href="{% url 'signup' %}">Inscription </a>
+        </div>
+    </nav>
+   
+    <div class="Hero">
+        <div class="contenuhero">
+           <h2> Se connecter </h2>
+         	<p> {{ message }}</p>
+
+           <form  class="formul" method="POST">
+		    {{ form.as_p }}
+		    {% csrf_token %}
+		    <button type="submit"> se connecter	</button>
+                <p>Pas encore membre ? <a href="{% url 'signup' %}">Inscrivez-vous maintenant !</a></p>
+
+            </form>
+        </div>
+        <div class="certificate-img">
+            <img src="{% static 'images/acte de marige back img.png' %}" alt="">
+        </div>
+    </div>
+    
+         
+   
+      <section> <!-- footer-bottom-->
+
+            <div class="footer-bottom">
+                <div class="fotter-bottom-text"> 
+                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                    chiffrées et hautement protégées.
+                    <br>
+                <div> </div>Mentions légales|
+                Politique de confidentialité|
+                Contact Support|
+                </p>
+            </div>
+            </div>
+        </section>
+</body>
+
+{% endblock content %}
