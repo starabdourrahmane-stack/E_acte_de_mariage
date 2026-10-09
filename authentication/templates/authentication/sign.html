@@ -7,47 +7,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatisation des Actes de Mariage Islamique</title>
+    <title> Acte de Mariage Islamique</title>
     <!-- FontAwesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styleconnexion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
 </head>
 <body>
       <nav class="navbar">
+        <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="">
+
         <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
         <ul>
-            <li> <a href="#"> Comment ça marche </a></li>
-            <li> <a href="#"> Coût et délais </a></li>
-            <li> <a href="#"> FAQ </a></li>
+            <li> <a href="#">  </a></li>
+            <li> <a href="#">  </a></li>
+            <li> <a href="#">  </a></li>
 
         </ul>
         <div class="title-web-2"> <a class="Active" href="{% url 'login' %}">Connexion </a>
         </div>
-    </nav>
-  
-
-    
+        </nav>
+                    <h2 style="text-align: center;">Inscription</h2>
+<br>
+            <div class="Hero_Blog">
             
-        <h2>Inscription</h2>
+                    {% if form.errors %}
+                    {{ form.errors }}
+                    {% endif %}
+            
+                    <form class="formul" method="post">
+                        {% csrf_token %}
+            
+                        {{ form }}
+            
+                        <button type="submit">S’inscrire</button>
+                    </form>
+                <div class="certificate-img1">
+                </div>
+            </div>
+                <section> <!-- footer-bottom-->
 
-        {% if form.errors %}
-            {{ form.errors }}
-        {% endif %}
-
-        <form class="formul" method="post">
-            {% csrf_token %}
-
-            {{ form }}
-
-            <button type="submit">S’inscrire</button>
-        </form>
-
-        </div>
-        <div class="certificate-img">
-            <img src="{% static 'images/acte de marige back img.png' %}" alt="">
-        </div>
-    </div>
-
-
-{% endblock content %}
+            <div class="footer-bottom">
+                <div class="fotter-bottom-text"> 
+                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                    chiffrées et hautement protégées.
+                    <br>
+                <div> </div>Mentions légales|
+                Politique de confidentialité|
+                Contact Support|
+                </p>
+            </div>
+            </div>
+        </section>
+            
+            {% endblock content %}

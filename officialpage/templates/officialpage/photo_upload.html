@@ -8,4 +8,10 @@
         {% csrf_token %}
         <button type="submit"> Publier </button>
     </form>
+
+         <section class="remplissage du formulaire">
+            <p> <a href="{% url 'home' %}"> Home</a></p>
+            <p> <a href="{% url 'create_blog_post' %}"> Ecrire un billet </a></p>
+            <p> <a href="{% url 'photo_upload' %}"> Télcharger une photo </a></p>
+        </section>
     {% endblock content %}

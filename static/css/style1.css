@@ -1,0 +1,135 @@
+
+
+
+body {
+    background-color: rgba(250, 243, 235, 0.74);
+    margin: 0;
+}
+
+
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.conn{
+    display: flex;
+}
+.title-web a{
+    text-decoration: none;
+    color: #7e5635;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 18px;
+}
+
+.title-web {
+display: flex;
+margin-top: 15px;
+}
+.title-web-2 {
+margin-top: 19px;
+}
+
+.title-web-2 a{
+    color :rgb(194, 136, 66);
+     border: 1px solid white;
+    padding: 11px;
+    color: white;
+background-color: rgb(213, 168, 96);
+border-radius: 12px;
+transition: 0.5s;
+}
+.title-web-2 a.Active {
+    transition: 0.5s;
+}
+.title-web-2 a.Active:hover{
+    background-color: rgb(32, 82, 82);
+}
+
+.navbar ul { 
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(48, 34, 7) ;
+    transition: 0.3s;
+    font-weight: 500;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+.navbar ul li a.AMI{
+    font-size: large;
+    color: rgb(185, 114, 22);
+}
+
+.formul{
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 2px 5px 5px rgba(233, 184, 184, 0.5);
+    width: 450px;
+    margin-left: 15px;
+    padding: 45px;
+    margin-bottom: 60px;
+}
+.formul label{
+    font-size: 22px;
+}
+.formul div{
+    margin: 15px;
+
+}
+label{
+    font-size: 22px;
+}
+
+button{
+    display: flex;
+}
+button{
+    width: 50%;
+    font-size: 20px;
+    background-color:#c76d23be;
+    border-radius: 10px;
+    justify-content: center;
+    transition: 0.5s;
+    transition: 0.5s;
+}
+ 
+.contenuhero{
+    padding: 25px;
+}
+button:hover{
+    background-color: rgb(32, 82, 82);
+}
+
+.Hero_Blog{
+    display: flex;
+}
+.certificate-img1 img{
+  width: 500px;
+    border-radius: 12px;
+    height: 400px;
+    gap: 60px;
+    margin-left: 30px;
+}
+
+@media(max-width: 769px) {
+    .certificate-img1 img{
+        display: none;
+    }
+    .formul{
+        width: 300px;
+        margin-left: 5px;
+    }
+}

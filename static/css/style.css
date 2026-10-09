@@ -5,6 +5,9 @@ body {
 }
 
 
+.point{
+    cursor: pointer;
+}
 .navbar{
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
@@ -37,7 +40,7 @@ margin-top: 19px;
     color: #7e5635;
     font-size: large;
     font-weight: 600;
-    margin-left: 18px;
+    margin-left: 14px;
 }
 
 .title-web-2 a{
@@ -75,7 +78,9 @@ transition: 0.5s;
     justify-content: space-between;
     
 }
-
+.navbar{
+    margin-right: 0px;
+}
 .navbar ul li a.AMI{
     font-size: large;
     color: rgb(185, 114, 22);
@@ -115,10 +120,10 @@ font-size: 2.55rem;
 
 }
 .certificate-img img{
-    width: 500px;
+  width: 500px;
     border-radius: 12px;
     height: 400px;
-margin-left: 80px;
+margin-left: 30px;
 margin-top: 58px;
 }
 
@@ -231,26 +236,39 @@ text-align: center;
     border: 1px solid white;
     padding: 50px 40px;
     padding: 50px;
-    background-color: white;
+    background-color: rgba(128, 62, 228, 0.452);
     border-radius: 10px;
     margin: 4px 18px;
     box-shadow: 2px 8px 0px rgb(231, 202, 202);
 
 }
+
 .fotter-bottom-text {
     border: 1px solid white;
-    padding: 10px;
+    padding: 45px;
     text-align: center;
     margin-top: 18px;
-    background-color: rgb(27, 32, 39);
-    color: aliceblue;
+    background-color: white;
+    color: rgb(2, 20, 2);
+
     margin-left: 0;
     margin-right: 0;
 
 }   
 
+.contact {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 12px;
+} 
+@media (min-width : 760px){
+    .dropdown {
+    display: none;
+    width: 45px; 
+    height:45px
+    }
 
-
+}
 @media(max-width:768px){
     .navbar ul { 
         display: none;

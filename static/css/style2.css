@@ -1,0 +1,35 @@
+
+.image-act1{
+    width: 500px;
+    border-radius: 12px;
+    height: 400px;
+margin-left: 30px;
+margin-top: 58px;
+margin-bottom: 40px;
+
+}
+.form-Wedding{
+    display: flex;
+    gap: 60px;
+}
+.class-forms{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid white;
+    background-color: white;
+    margin-left: 12px;
+    padding: 20px;
+    box-shadow: 4px 5px 5x rgba(0, 0, 0, 0.2);
+}
+.btnstyle button {
+    display: flex;
+}
+.btnstyle button {
+    width: 50%;
+    font-size: 20px;
+    background-color:#c76d23be;
+    border-radius: 10px;
+    justify-content: center;
+    transition: 0.5s;
+    transition: 0.5s;
+}

@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 import officialpage.views 
 import authentication.views
 urlpatterns = [
+    path('',officialpage.views.home),
     path('admin/', admin.site.urls),
     path('home/', officialpage.views.home, name='home'),
     path('login/', authentication.views.loginpage, name ='login'),
@@ -18,10 +19,15 @@ urlpatterns = [
         template_name='authentication/password_change_done.html'),
          name='password_change_done'
          ),
-    path('accueil/', officialpage.views.demande, name ='accueil'),
+    path('accueilx/', officialpage.views.demande, name ='accueilx'),
     path('signup/', authentication.views.Sing_up, name ='signup'),
     path('upload/', officialpage.views.photo_upload, name='upload'),
-    path('photo/upload', officialpage.views.photo_upload, name ='photo_upload')
+    path('profile-photo/upload', authentication.views.upload_profile_photo, name='changephoto'),
+    path('photo/upload', officialpage.views.photo_upload, name ='photo_upload'),
+    path('officialpage/create', officialpage.views.officialpage_and_photo_upload, name ='create_blog_post'),
+    path('officialpage/remplissage', officialpage.views.formulaire_Mariage, name ='formulaire'),
+    path('payement/', officialpage.views.payer, name= 'payer'),
+
     ]
 if settings.DEBUG:
     urlpatterns += static(

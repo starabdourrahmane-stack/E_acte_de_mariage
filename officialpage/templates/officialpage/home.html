@@ -7,19 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acte de Marige Islamique</title>
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
 </head>
-
 <body>
     <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="">
+
         <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
         <ul>
-            <li> <a href="#"> Comment ça marche </a></li>
-            <li> <a href="#"> Coût et délais </a></li>
-            <li> <a href="#"> FAQ </a></li>
+            <li> <a href="#Comment ça marche"> Comment ça marche </a></li>
+            <li> <a href="#Coût et délais"> Coût et délais </a></li>
+            <li> <a href="#FAQ"> FAQ </a></li>
 
         </ul>
         <div class="title-web-2"> <a class="Active" href="{% url 'login' %}">Connexion </a>
         </div>
+
+ 
+<select onchange="if (this.value) window.location.href=this.value;">
+    <option value="">-- Navigation --</option>
+
+    <option value="#Comment ça marche">comment ça marche </option>
+    <option value="#Coût et délais"> Coût et délais</option>
+    <option value="#FAQ"> FAQ</option>
+    <option value="{% url 'login' %}">  commencer la demande </a></option>
+    <option value="{% url 'signup' %}">  inscription  </a></option>
+</select> 
     </nav>
    
     <div class="Hero">
@@ -27,57 +40,60 @@
             <h1> Automatisez Vos Démarches de <br> <span class="MI"> Mariage Islamique </span></h1>
             <p> Générez, vérifiez et validez vos Actes de mariage de manière moderne, <br>
                 rapide et totalement sécurisée. Reçu officiel envoyé directement par e-mail. <br>
-                Délivré sous l'autorité du Président du Conseil Supérieur de l'Islam au Bénin (CSIB)
+                Délivré sous l'autorité du Président du Conseil Supérieur de l'Islam au Bénin (CSIB) <br> <br> <br> <br>
+                <button style="border: 1px solid rgb(138, 23, 23); padding: 8px; width: 400px;; background-color: rgb(233, 240, 233);"> <a style="color: black; font-weight: 500; font-size: 24px; text-decoration: none;" href="{% url 'login' %}"> Commencer la demande</a></button>
         </div>
         <div class="certificate-img">
             <img src="{% static 'images/acte de marige back img.png' %}" alt="">
         </div>
     </div>
 
-
+<br> <br> <br> <br> <br> <br>
 
 
     <div class="startdemande">
-        <!-- Icone remplir un formulaire-->
-        <button class="btn-primary"> <a href="formulaire.html"> Commencer la demande</a> </button>
-        <button class="btn-secondary"> <a href="#formulaire"> Voire la procédure</a> </button>
+        <!-- Icone remplir un formulaire 
+       <!--  <button class="btn-primary" > <a href="{% url 'login' %}"> Commencer la demande</a> </button> 
+        <button class="btn-secondary"> <a href="#formulaire"> Voire la procédure</a> </button> -->
     </div>
     </div>
-    <section> <!-- Comment ça marche -->
+    <section id="Comment ça marche" > <!-- Comment ça marche -->
 
         <div class="procedure">
             <h1 style=" text-align: center; padding-top: 18px;">
                 Une procédure simple et transparente <br>
                 <p style="text-align: center; font-size: 16px;">
-                    suivez les 4 étapes pour officialiser votre demande d'acte de mariage
+                    suivez les 3 étapes pour officialiser votre demande d'acte de mariage
                 </p>
             </h1>
             <div class="buttons">
-                <button class="btn-1"> 1 <h3> Authentification</h3>
+                <button class="btn-1"> <span style=" font-size: 40px; color: rgb(89, 0, 255);" ;"> 1 </span>  <h3> Connexion</h3>
                     Créez votre compte rapidement <br> pour sécuriser vos données <br> et suivre votre dossier.
                 </button>
-                <button class="btn-1"> 2 <h3> Remplissage & Pièces</h3>
+                <button class="btn-1"> <span style=" font-size: 40px; color: rgb(89, 0, 255);" ;"> 2 </span>  <h3> Remplissage & Pièces</h3>
                     Entrez les infos du couple, <br>de la dot,
                     des témoins <br>
                     et joignez les pièces d'identité. </button>
-                <button class="btn-1"> 3 <h3> Vérification PDF
+                 <!--  <button class="btn-1"> 3 <h3> Vérification PDF
                     </h3>
                     Un algorithme génère un <br>
                     aperçu PDF.
-                    Relisez, <br> modifiez s'il y a des erreurs ou validez. </button>
-                <button class="btn-1"> 4 <h3> Paiement & Email
+                    Relisez, <br> modifiez s'il y a des erreurs ou validez. </button> -->
+                
+                <button class="btn-1">  <span style=" font-size: 40px; color: rgb(89, 0, 255);" ;"> 3 </span>   <h3> Paiement & Email
                     </h3>
                     Payez par Mobile Money. <br> Recevez instantanément votre <br> confirmation par e-mail. </button>
             </div>
         </div>
     </section>
-    <section> <!-- Coût et délais-->
+    <section id="Coût et délais"> <!-- Coût et délais-->
         <div class="section-montant">
-            <h2> Coût et délais </h2>
+            <h2 > Coût et délais </h2>
 
             <p> Le paiement intervient après validation de vos données. <br>
                 Frais de Traitement <br>
-                <span style="font-size: 48px;"> 5000FCFA </span>
+                <span style="font-size: 48px; color: rgb(75, 20, 163); font-weight: 700;" > 5000FCFA </span> <br> l'acte de mariage vous sera envoyé via mail dans un délais
+                <span style="color: rgb(98, 41, 211); font-weight: 600;">  de 3 jours </span>
             </p>
           
         </div>
@@ -97,7 +113,7 @@
             </div>
         </div>
     </section>
-    <h1 style="text-align: center;"> Foire Aux Questions </span>
+    <h1 id="FAQ" style="text-align: center;"> Foire Aux Questions </span>
     </h1>
     <p style="text-align: center;"> Tout ce que vous devez savoir sur le service.</p>
 
@@ -113,7 +129,7 @@
             </h3>
             Il est actuellement difficile pour les tiers de vérifier l'authenticité d'un acte de mariage écrit à la
             main. L'absence de base de données centralisée entraîne de forts risques de falsification ou de perte. Notre
-            plateforme sécurise et centralise vos données, rendant l'acte infalsifiable et vérifiable instantanément
+            plateforme sécurise et centralise vos données, rendant l'acte infalsifiable et vérifiable instantanément <hr>
             <h3> En quoi ce document protège-t-il le couple en cas de litige futur ?</h3>
             L'absence d'un acte de mariage fiable complique fortement les démarches futures en cas de litiges, de
             divorces ou de discordes successorales entre les familles des deux conjoints. Avoir un document numérique
@@ -126,6 +142,9 @@
 
             <div class="footer-bottom">
                 <div class="fotter-bottom-text"> 
+                   <div class="contact">  
+                    <br> Pour plus d'informations  : +229 01 90 56 75 85                  <hr>
+                    </div>
                 <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
                     chiffrées et hautement protégées.
                     <br>

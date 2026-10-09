@@ -1,6 +1,26 @@
 
-/*  style css de la page d'accueil*/
-html {
+
+body {
+    background-image: url("../images/backgroud img_accueilx.jpeg");
+    background-size: cover;
+    background-position: center;
+}   
+.main{
+    margin-left:240px;
+    padding: 20;
+    color :rgb(31, 17, 17);
+} 
+.main h1{
+    font-size: 35px;
+    text-align: center;
+}
+.main button{
+    text-align: center;
+}
+.main p{
+    font-size: 25px;
+    text-align: center;
+}html {
     font-family: Arial;
 }
 
@@ -58,5 +78,3 @@ html {
     width: 80%;
     border-radius: 5px;
 }
-
-/*  style css de la page d'accueil*/

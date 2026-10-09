@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Acte de Mariage Islamique </title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <link rel="stylesheet" href="style3.css">
+    </head>
+<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7">
+
+</script>
+<body>
+        <nav class="navbar">
+        <div class="title-web"> <a class="AMI" style="text-indent: left"; href="#"> Acte de Marige Islamique </a></div>
+                 <select onchange="if (this.value) window.location.href=this.value;">
+    <option value="">-- Navigation --</option>
+    <option value="{% url 'formulaire' %}"> Remplire le formulaire </option>
+
+    <option value="{% url 'login' %}">  connexion  </a></option>
+    <option value="{% url 'home' %}">  Acuueil  </a></option>
+    <option value="{% url 'logout' %}">  Déconexion  </a></option>
+
+
+</select> 
+    </nav>
+            <br> <br>
+            <div class="paid"> 
+    <h2> Passons au paiement Très cher(e)! {{ user }}</h2> 
+      <button id="pay-btn">Payer 100 FCFA</button>
+
+      
+<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7">
+
+</script>
+      
+            
+  <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+</head>
+<body>
+
+    <div id="embed" style=" width:500px; height:500px; justify-content: center;" > </div>
+  <script type="text/javascript">
+      FedaPay.init({
+        public_key: 'pk_live_I5KE2yPN_iqiD0OgKV5S_T8f',
+        transaction:{
+            amount:100,
+            description: "Paiement du dossier d'Acte de Mariage Islamique du couple {{ nom_marie }} {{ nom_epouse }}",
+        },
+        container: '#embed'
+
+    });
+  </script>
+  
+            </section>
+    <p>  </p>
+                <br> <a  href="{% url 'logout' %}">Se déconnecter</a></p>
+{% endblock content %}
+</div>
+</body>

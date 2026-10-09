@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Acte de Marige Islamique</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+</head>
+
+<body>
+    <section class="Navbar-top">
+        <nav class="navbar">
+            <div class="title-web"> <a class="AMI" style="text-indent: left;" ; href="#"> Acte de Marige Islamique </a>
+            </div>
+            <ul>
+                <li> <a href="{% url 'home' %}"> Home </a></li>
+
+            </ul>
+            </div> <br> <br> 
+               <select onchange="if (this.value) window.location.href=this.value;">
+    <option value="">-- Navigation --</option>
+
+    <option value="{% url 'login' %}">  connexion  </a></option>
+    <option value="{% url 'home' %}">  Acuueil  </a></option>
+    <option value="{% url 'logout' %}">  Déconexion  </a></option>
+
+
+</select> 
+        </nav>
+    </section>
+    <div class="form-Wedding">
+        <div class="class-forms">
+            <h2>Remplir un formulaire de Mariage</h2>
+            {% if form.error %}
+            <p style="color: red;"> Veuillez corriger les erreurs dans la fomulaire </p>
+            {{ form.errors }}
+            {% endif %}
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="btnstyle"> <button type="submit">Valider et Payer</button> </div>
+            </form>
+        </div>
+        <div class="class-image">
+            <img class="image-act1" src="{% static 'images/acte de marige back img.png' %}" alt="">
+        </div>
+    </div>
+
+    <section> <!-- footer-bottom-->
+
+        <div class="footer-bottom">
+            <div class="fotter-bottom-text">
+                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                    chiffrées et hautement protégées.
+                    <br>
+                <div> </div>Mentions légales|
+                Politique de confidentialité|
+                Contact Support|
+                </p>
+            </div>
+        </div>
+    </section>
+    {% endblock content %}

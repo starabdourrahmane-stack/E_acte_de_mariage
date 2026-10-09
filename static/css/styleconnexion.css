@@ -9,7 +9,7 @@
     margin-left: 35px;
     height: 250px;
     padding: 45px;
-    padding-bottom: 85px;
+    padding-bottom: 50px;
     width: 40%;
     
 }
@@ -21,7 +21,7 @@ label{
     font-size: 26px;
 }
 input {
-    width: 50%;
+    width: 300px;
     font-size: 24px;
     color: rgba(63, 63, 242, 0.782);
 }
@@ -40,6 +40,9 @@ button{
 
 }
  
+.contenuhero{
+    padding: 25px;
+}
 button:hover{
     background-color: rgb(32, 82, 82);
 }
@@ -47,8 +50,18 @@ button:hover{
 
 .formul{
     background-color: white;
-    padding: 15px;
+    padding: 25px;
+    width: 350px;
+    
 }
 @media(max-width:768px){
-
+    .certificate-img{
+        display: none;
+    }
+    .image-act{
+        display:none ;
+    }
+    .formul{
+        margin-left: 0px;
+    }
 }

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h2> Remplire un formulaire </h2>
+    <form  method="POST" enctype="multipart/form-data"> 
+        {{ officialpage_form.as_p }}
+        {{ Photo_form.as_ }}
+        {% csrf_token %}
+        <button type="submit"> Publier  </button>
+    </form>
+
+    <h2>{{ blog.title }}</h2>
+    <p><a href="{% url 'edit_officialpage' blog.id %}">Modifier le billet</a></p>
+    <img src="{{ blog.photo.image.url }}">
+    <p>{{ blog.photo.caption }}</p>
+    <p>{{ blog.content }}</p>
+{% endblock content %}

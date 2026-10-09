@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from authentication import forms
-from django.contrib.auth import login, authenticate, logout# import des fonctions login et authenticate
+from django.contrib.auth import login, authenticate, logout # import des fonctions login et authenticate
 from django.core.exceptions import ValidationError
 
 # Create your views here.
@@ -23,7 +23,7 @@ def loginpage(request):
                    )
             if user is not None:
                 login(request, user)
-                return redirect('accueil')
+                return redirect('accueilx')
             else:
                 message = 'Identifiants invalides.'
     return render(request, 'authentication/login.html',
@@ -39,3 +39,12 @@ def Sing_up(request):
     return render(request, 'authentication/sign.html',
                   context = {'form': form})
 
+def upload_profile_photo(request):
+    form = forms.UploadProfilePhotoForm(instance=request.user)
+    if request.method =='POST':
+        form = forms.UploadProfilePhotoForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            redirect('accueil')
+    return render(request, 'authentication/upload_profile_photo.html', 
+        context ={'form':form})

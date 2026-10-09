@@ -10,9 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatisation des Actes de Mariage Islamique</title>
     <!-- FontAwesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styleconnexion.css' %}">
     
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
 </head>
@@ -21,9 +18,9 @@
       <nav class="navbar">
         <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
         <ul>
-            <li> <a href="#"> Comment ça marche </a></li>
-            <li> <a href="#"> Coût et délais </a></li>
-            <li> <a href="#"> FAQ </a></li>
+            <li> <a href="#">  </a></li>
+            <li> <a href="#"> </a></li>
+            <li> <a href="#">  </a></li>
 
         </ul>
         </div>
@@ -35,34 +32,41 @@
 
     </div>
     <div class="sidebar"> 
-        <h1> Acte de Mariage En Ligne </h1>
-            {% if user.is_authenticated %}
-            <p> salut, {{ user }} !</p>
+        <h2> Acte de Mariage Islamique  </h2>
+        {% if user.is_authenticated %}
+            <p> Bienvenue, {{ user }} ! </p>
+
+            {% if user.profile_photo  %}
+                <img style="width: 120px; height: 120px; border-radius: 65px;" src="{{ user.profile_photo.url }}" alt="">
+            {% else %}
             <img class="avatar" src="{% static 'images/default_profile.png' %}" alt="">
+            {% endif %}
+             <p> <a href="{% url 'formulaire' %}"> Remplire le fomualire de l'acte de <br> Mariage</a></p>
             <p> <a href="{% url 'upload' %}">Téléverser Une photo </a></p>
+            <p> <a href="{% url 'changephoto' %}"> Changer de photo de profile</a></p>
             <p><a href="{% url 'password_change' %}">Changer le mot de passe</a></p>
-            <p><a href="{% url 'logout' %}">Se déconnecter</a></p>
-            <p>  Vou êtes connecté en tant que {{ request.user }}. <a href="{% url 'logout' %}">Se déconnecter</a></p>
+
+            
+            <br> <br>
+            <p>  Vou êtes connecté en tant que {{ request.user }}. <br>
+                <br> <a href="{% url 'logout' %}">Se déconnecter</a></p>
         {% endif %} <br> <br>
     </div>   
-<!--   <h2> Photos </h2>
-    {% for photo in photos %}
-     <img src="{{ photo.image.url }}">
-     <p> {{ photo.caption }}</p>
-    {% endfor %}-->
-
+   <h2>Photos</h2>
+    <div class="grid-container">
+        {% for photo in photos %}
+            <div class="post">
+                <img src="{{ photo.image.url }}">
+                <p>{{ photo.caption }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </section>
 
-    </div>
-        <section class="remplissage du formulaire">
-
-        </section>
-
-    {% endblock content %}
-
-          <section> <!-- footer-bottom-->
-
-            <div class="footer-bottom">
+<div class="main">
+    <h1>Bienvenue sur votre espace personnel</h1>
+</div>  
+<!-- <section>    <div class="footer-bottom">
                 <div class="fotter-bottom-text"> 
                 <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
                     chiffrées et hautement protégées.
@@ -72,7 +76,9 @@
                 Contact Support|
                 </p>
             </div>
-            </div>
-        </section>
+            </div> 
+       </section>-->
+          
 </body>
 
+    {% endblock content %}
