@@ -85,3 +85,6 @@ def edit_officialpage(request, official_id):
         'delete_form': delete_form,
     }
     return render(request, 'officialpage/edit_officialpage.html', context =context)
+
+def signer(request):
+    return render(request, 'officialpage/signature.html')

@@ -50,13 +50,14 @@
                 {% csrf_token %}
 
                 {{ form.as_p }}
-
+                    <div>
+<a href="{% url 'signature' %}">
+    Téléchargez ce document puis signez-le
+</a>                    </div> <br> <br>
                 <div class="btnstyle"> <button type="submit">Valider et Payer</button> </div>
             </form>
         </div>
-        <div class="class-image">
-            <img class="image-act1" src="{% static 'images/acte de marige back img.png' %}" alt="">
-        </div>
+       
     </div>
 
     <section> <!-- footer-bottom-->

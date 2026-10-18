@@ -1,0 +1,31 @@
+.signature-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    font-family: serif;
+}
+
+.signature-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.signature {
+    width: 50%;
+    text-align: center;
+}
+body{
+    font-size: 28px;
+}
+.signature-space {
+    height: 100px;
+    border-bottom: 1px solid #333;
+}

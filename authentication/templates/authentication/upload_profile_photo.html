@@ -3,10 +3,12 @@
 
 
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
 {% block content %}
  {% if user.is_authenticated %}
             <p> Bienvenue, {{ user }} ! 😅</p>
 {% endif %}
+<div class="changephoto"> 
 <h2> Changement de photo de propfil </h2>
     <form method="POST"enctype="multipart/form-data" >
         
@@ -15,7 +17,7 @@
     <button type="submit"> Soumettre </button>
     </form>
 
-
-
+</div>
+    <a href="{% url 'accueilx' %}"> Retour</a>
 
 {% endblock %}

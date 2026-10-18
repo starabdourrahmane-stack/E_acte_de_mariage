@@ -27,6 +27,7 @@ urlpatterns = [
     path('officialpage/create', officialpage.views.officialpage_and_photo_upload, name ='create_blog_post'),
     path('officialpage/remplissage', officialpage.views.formulaire_Mariage, name ='formulaire'),
     path('payement/', officialpage.views.payer, name= 'payer'),
+    path('signature/', officialpage.views.signer, name ='signature'),
 
     ]
 if settings.DEBUG:

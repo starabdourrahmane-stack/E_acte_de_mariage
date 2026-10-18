@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation des Actes de Mariage Islamique</title>
+    <!-- FontAwesome pour les icônes -->
+    
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+</head>
+<body>
+<section class="Navbar-top"> 
+      <nav class="navbar">
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+        <ul>
+            <li> <a href="#">  </a></li>
+            <li> <a href="#"> </a></li>
+            <li> <a href="#">  </a></li>
+
+        </ul>
+        </div>
+    </nav>
+</section>
+
+
+
+
+<div class="signature-container">
+    <h2>Demande d'acte de mariage islamique</h2>
+
+    
+    <p>
+        Nous confirmons, par nos signatures, notre demande
+        d'établissement d'un acte de mariage islamique.
+    </p>
+
+    <div class="signatures">
+        <div class="signature">
+            <p>Signature du marié</p>
+            <div class="signature-space"></div>
+            <p> Nom de l'époux </p>
+        </div>
+
+        <div class="signature">
+            <p>Signature de la mariée</p>
+            <div class="signature-space"></div>
+            <p> nom de l'épouse </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

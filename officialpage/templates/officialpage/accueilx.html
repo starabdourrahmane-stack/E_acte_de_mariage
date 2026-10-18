@@ -41,14 +41,13 @@
             {% else %}
             <img class="avatar" src="{% static 'images/default_profile.png' %}" alt="">
             {% endif %}
-             <p> <a href="{% url 'formulaire' %}"> Remplire le fomualire de l'acte de <br> Mariage</a></p>
-            <p> <a href="{% url 'upload' %}">Téléverser Une photo </a></p>
+             <p> <a href="{% url 'formulaire' %}"> Remplire le fomualire <br> de l'acte de  Mariage</a></p>
+            <br>
             <p> <a href="{% url 'changephoto' %}"> Changer de photo de profile</a></p>
             <p><a href="{% url 'password_change' %}">Changer le mot de passe</a></p>
 
             
             <br> <br>
-            <p>  Vou êtes connecté en tant que {{ request.user }}. <br>
                 <br> <a href="{% url 'logout' %}">Se déconnecter</a></p>
         {% endif %} <br> <br>
     </div>   

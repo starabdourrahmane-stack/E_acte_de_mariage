@@ -32,14 +32,14 @@ class ActeMariage(models.Model):
     )
 
     # Informations du Marié
-    nom_marie = models.CharField(max_length=70, verbose_name='Nom du marié')
+    nom_marie = models.CharField(max_length=70, verbose_name="Nom de l'époux")
     prenom_marie = models.CharField(
-        max_length=70, verbose_name='Prénom du marié'
+        max_length=70, verbose_name="Prénom de l'époux"
     )
     # Remplacement par FileField + Validator
     cip_marie = models.FileField(
         upload_to='cip/maries/',
-        verbose_name='CIP du marié (PDF ou Image)',
+        verbose_name="CIP de l'époux (PDF ou Image)",
         validators=[
             FileExtensionValidator(allowed_extensions=VALID_IMAGE_EXTENSIONS)
         ],
@@ -48,14 +48,14 @@ class ActeMariage(models.Model):
 
     # Informations de l'Épouse
     nom_epouse = models.CharField(
-        max_length=70, verbose_name='Nom de la mariée'
+        max_length=70, verbose_name="Nom de l'épouse"
     )
     prenom_epouse = models.CharField(
-        max_length=70, verbose_name='Prénom de la mariée'
+        max_length=70, verbose_name="Prénom de l'épouse"
     )
     image_epouse = models.ImageField(
         upload_to='photo/maries/',
-        verbose_name ='Photo du marié',
+        verbose_name ="Photo de l'épouse",
         validators =[
             FileExtensionValidator(allowed_extensions = VALID_IMAGE_EXTENSIONS ) 
         ]
@@ -71,7 +71,7 @@ class ActeMariage(models.Model):
     )
     signature_du_mari = models.FileField(
     upload_to='signature/epoux/',
-    verbose_name="Signature de l'époux (signez sur papier, scannez et envoyez)",
+    verbose_name="Signature de l'époux (signez , scannez et envoyez)",
     validators=[
         FileExtensionValidator(
             allowed_extensions=VALID_IMAGE_EXTENSIONS
@@ -83,7 +83,7 @@ class ActeMariage(models.Model):
 
     signature_de_la_mariee = models.FileField(
     upload_to='signature/epouse/',
-    verbose_name="Signature de l'épouse (signez sur papier, scannez et envoyez)",
+    verbose_name="Signature de l'épouse (signez, scannez et envoyez)",
     validators=[
         FileExtensionValidator(
             allowed_extensions=VALID_IMAGE_EXTENSIONS
@@ -101,12 +101,14 @@ class ActeMariage(models.Model):
 
     # Témoins
     temoin_1 = models.CharField(
-        max_length=100, verbose_name='Nom et prénom du témoin 1'
+        max_length=100, verbose_name="Nom et prénom du témoin 1 (Selon CIP)"
     )
     temoin_2 = models.CharField(
-        max_length=100, verbose_name='Nom et prénom du témoin 2'
+        max_length=100, verbose_name="Nom et prénom du témoin 2"
     )
-
+    temoin_3 = models.CharField(
+            max_length=100, verbose_name="Nom et prénom du témoin 3(pas obligatoire)",
+        blank=False, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
