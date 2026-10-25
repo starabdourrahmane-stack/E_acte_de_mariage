@@ -2,6 +2,7 @@
 body {
     background-color: rgba(250, 243, 235, 0.74);
     margin: 0;
+    padding: 0;
 }
 
 
@@ -14,6 +15,11 @@ body {
     padding-top: 5px;
     display: flex;
     justify-content: center;
+    max-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
 
 }
 .conn{
@@ -24,7 +30,7 @@ body {
     color: #7e5635;
     font-size: large;
     font-weight: 600;
-    margin-left: 18px;
+    margin-left: 15px;
 }
 
 .title-web {
@@ -33,6 +39,7 @@ margin-top: 15px;
 }
 .title-web-2 {
 margin-top: 19px;
+margin-right: 15px;
 }
 
 .title-web-2 a{
@@ -52,10 +59,13 @@ background-color: rgb(213, 168, 96);
 border-radius: 12px;
 transition: 0.5s;
 
-
+.Active{
+    margin-right: 15px;
+}
 }
 .title-web-2 a.Active {
     transition: 0.5s;
+    margin-right: 20px;
 }
 .title-web-2 a.Active:hover{
     background-color: rgb(32, 82, 82);
@@ -66,7 +76,7 @@ transition: 0.5s;
     display: flex;
     justify-content: space-between;
     gap: 7px;
-
+margin-left: 15px;
 }
 
 .navbar ul li a{
@@ -86,27 +96,14 @@ transition: 0.5s;
     color: rgb(185, 114, 22);
 }
 
-.sch{ 
-
-    border:1px solid white; 
-    background-color: rgb(128, 249, 249);
-    padding: 4px 12px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 12px;
-    letter-spacing: 0.05em;
-
-    }
-.badge{
-    text-align: center;
-}
 .Hero{
     display: flex;
 }
 .contenuhero{
-    margin: 25px 18px;
-
+    margin: 25px;
+justify-content: center;
+text-align: center;
+margin-left: 50px;
     
 }
 .MI{
@@ -117,6 +114,7 @@ transition: 0.5s;
 
 .contenuhero h1{
 font-size: 2.55rem;
+margin-left: 15px;
 
 }
 .certificate-img img{
@@ -203,9 +201,12 @@ text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
 }
-.buttons{
-text-align: center;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+
 .section-montant{
     border : 1px solid white;
     width: 100%;
@@ -261,6 +262,20 @@ text-align: center;
     margin-left: 0;
     margin-bottom: 12px;
 } 
+
+
+.mes-images{
+    display: flex;
+   justify-content: space-between;
+    margin-top: 75px;
+
+}
+.mes-images img{
+   
+    gap: 15px;
+    justify-content: space-between;
+    
+}
 @media (min-width : 760px){
     .dropdown {
     display: none;
@@ -272,8 +287,14 @@ text-align: center;
 @media(max-width:768px){
     .navbar ul { 
         display: none;
+        
     }
-    
+    .navbar{
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+    }
     
     .title-web a{
         font-size: 28px;
@@ -281,6 +302,7 @@ text-align: center;
     }
     .Hero{
         flex-direction: column ;
+        width: auto;
     }
     .certificate-img{
         width: 250px;
@@ -292,11 +314,11 @@ text-align: center;
     }
     .procedure {
         margin-top: 0;
+        width: auto;
     }
-    .buttons{
-    flex-direction: column;
-    width: 300px;
-    padding: 40px;
+     .buttons {
+        flex-direction: column;
+        align-items: center;
     }
     .btn-1{
         width: 250px;
@@ -316,8 +338,7 @@ text-align: center;
         padding: 50%;
         margin-left: -18px;
         font-size: 20px;
-        margin-bottom: px;
-
+        
     }
     .btn-FAQ h3{
         display: flex;
@@ -329,8 +350,8 @@ text-align: center;
     margin: 80px 8%;
      }
      
-     .footer-bottom{
-        width: 100%;
+    .footer-bottom{
+        width: aurto;
         
      }
 }
