@@ -1,2 +1,4 @@
-Django>=6.0
+﻿Django>=6.0
 whitenoise
+dj-database-url
+psycopg2-binary
