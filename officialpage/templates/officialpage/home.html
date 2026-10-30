@@ -8,6 +8,7 @@
     <title>Acte de Marige Islamique</title>
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
 </head>
 <body>
     <nav class="navbar">
@@ -20,11 +21,19 @@
             <li> <a href="#FAQ"> FAQ </a></li>
 
         </ul>
-        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}">Connexion </a>
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
         </div>
-
- 
-<select onchange="if (this.value) window.location.href=this.value;">
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+            <a href="#Comment ça marche">Comment ça marche </a>
+            <a href="#Coût et délais"> Coût et délais </a>
+            <a href="#FAQ"> FAQ </a>
+            <a href="{% url 'login' %}">  Commencer la demande </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+        </nav>
+<!-- <select onchange="if (this.value) window.location.href=this.value;">
     <option value="">-- Navigation --</option>
 
     <option value="#Comment ça marche">comment ça marche </option>
@@ -32,9 +41,10 @@
     <option value="#FAQ"> FAQ</option>
     <option value="{% url 'login' %}">  commencer la demande </a></option>
     <option value="{% url 'signup' %}">  inscription  </a></option>
-</select> 
+</select>  -->        
+
     </nav>
-   
+
     <div class="Hero">
         <div class="contenuhero">
             <h1> Automatisez Vos Démarches de <br> <span class="MI"> Mariage Islamique </span></h1>
@@ -154,11 +164,14 @@
                     <br>
                 <div> </div>Mentions légales|
                 Politique de confidentialité|
+
+
                 Contact Support|
                 </p>
             </div>
             </div>
         </section>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>

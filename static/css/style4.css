@@ -6,7 +6,7 @@
     font-family: serif;
 }
 
-.signature-container h2 {
+.signature-container h3 {
     text-align: center;
     text-transform: uppercase;
 }
@@ -23,7 +23,7 @@
     text-align: center;
 }
 body{
-    font-size: 28px;
+    font-size: 24px;
 }
 .signature-space {
     height: 100px;

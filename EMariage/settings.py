@@ -123,8 +123,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 AUTH_USER_MODEL = 'authentication.User'
-LOGIN_REDIRECT_URL = '/accueil/'
+LOGIN_REDIRECT_URL = '/accueilx/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT ='media/'

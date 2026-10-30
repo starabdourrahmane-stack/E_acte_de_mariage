@@ -3,30 +3,46 @@
 
 
 {% block content %}
-<head> 
-    <meta charset="UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Acte de Mariage Islamique </title>
-    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
-
-    <link rel="stylesheet" href="style3.css">
-    </head>
-<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7">
-
-</script>
+    <title>Acte de Marige Islamique</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
+</head>
 <body>
-        <nav class="navbar">
-        <div class="title-web"> <a class="AMI" style="text-indent: left"; href="#"> Acte de Marige Islamique </a></div>
-                 <select onchange="if (this.value) window.location.href=this.value;">
+    <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
+
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+   
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
+
+        </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+             <a href="{% url 'home' %}"> Accueil </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+            <a href="{% url 'logout' %}">  Se déconnecter </a>
+
+        </nav>
+<!-- <select onchange="if (this.value) window.location.href=this.value;">
     <option value="">-- Navigation --</option>
-    <option value="{% url 'formulaire' %}"> Remplire le formulaire </option>
 
-    <option value="{% url 'login' %}">  connexion  </a></option>
-    <option value="{% url 'home' %}">  Acuueil  </a></option>
-    <option value="{% url 'logout' %}">  Déconexion  </a></option>
+    <option value="#Comment ça marche">comment ça marche </option>
+    <option value="#Coût et délais"> Coût et délais</option>
+    <option value="#FAQ"> FAQ</option>
+    <option value="{% url 'login' %}">  commencer la demande </a></option>
+    <option value="{% url 'signup' %}">  inscription  </a></option>
+</select>  -->        
 
-
-</select> 
     </nav>
             <br> <br>
             <div class="paid"> 

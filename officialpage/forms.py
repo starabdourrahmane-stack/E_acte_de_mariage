@@ -17,14 +17,6 @@ class officialpageForm(forms.ModelForm):
 class DeleteofficialpageForm(forms.Form):
     delete_officialpage = forms.BooleanField(widget = forms.HiddenInput, 
                 initial=True)
-
-
-
-
-
-
-
-
 class FromMariage(forms.ModelForm):
     class Meta:
         model = models.ActeMariage

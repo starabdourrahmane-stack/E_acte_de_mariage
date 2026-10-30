@@ -3,6 +3,7 @@
 
 {% load static %}
 {% block content %}
+ 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,30 +14,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/styleconnexion.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'js/script.js' %}">
 
    
 </head>
 <body>
-      <nav class="navbar">
-        <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="">
+ <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
 
         <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
         <ul>
-            <li> <a href="{% url 'home' %}"> Home </a></li>
-            <li> <a href="#">  </a></li>
-            <li> <a href="#">  </a></li>
+            <li> <a href="#Comment ça marche">  </a></li>
+            <li> <a href="#Coût et délais"> </li>
+          
+
 
         </ul>
-        <div class="title-web-2"> <a class="Active" href="{% url 'signup' %}">Inscription </a>
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
         </div>
-        <select onchange="if (this.value) window.location.href=this.value;">
-    <option value="">-- Navigation --</option>
+        
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+            <a href="{% url 'home' %}"> Accueil </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+        </nav>
+       
 
-    <option value="{% url 'signup' %}"> inscription  </a></option>
-    <option value="{% url 'login' %}">  connexion  </a></option>
-    <option value="{% url 'home' %}">   Acuueil  </a></option>
-    <option value="{% url 'logout' %}"> Deconexion  </a></option>
-
+    </nav>
+<br>
+        </div>
+        
+  
 
 </select> 
     </nav>
@@ -51,7 +63,7 @@
 		    {% csrf_token %}
 		    <button type="submit"> se connecter	</button>
                 <p>Pas encore membre ? <a href="{% url 'signup' %}">Inscrivez-vous maintenant !</a></p>
-
+                <p> Mot de passe oublié ? <a href="{% url 'password_change' %}"> changer le mot de passe </a></p>
             </form>
         </div>
         <div class="certificate-img">
@@ -75,6 +87,9 @@
             </div>
             </div>
         </section>
+        <script src="{% static 'js/script.js' %}"></script>
+
 </body>
+
 
 {% endblock content %}
