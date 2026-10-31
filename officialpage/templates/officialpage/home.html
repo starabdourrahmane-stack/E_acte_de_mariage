@@ -51,16 +51,31 @@
             <p> Générez, vérifiez et validez vos Actes de mariage de manière moderne, <br>
                 rapide et totalement sécurisée. Reçu officiel envoyé directement par e-mail. <br>
                 Délivré sous l'autorité du Président du Conseil Supérieur de l'Islam au Bénin (CSIB) <br> <br> <br> <br>
-                <button style="border: 1px solid rgb(138, 23, 23); padding: 8px; width: 400px;; background-color: rgb(233, 240, 233);"> <a style="color: black; font-weight: 500; font-size: 24px; text-decoration: none;" href="{% url 'login' %}"> Commencer la demande</a></button>
+                <button style="border: 1px solid rgb(138, 23, 23); padding: 8px; width: 400px;; background-color: rgb(233, 240, 233);">
+                     <a style="color: black; font-weight: 500; font-size: 24px; text-decoration: none;" href="{% url 'login' %}"> Commencer la demande -> </a></button>
         </div>
         <div class="certificate-img">
             <img src="{% static 'images/acte de marige back img.png' %}" alt="">
         </div>
     </div>
 <hr>
-<div class="mes-images"> 
-    <img style="width: 480px; margin-left: 50px; margin-right: 80px; margin-top: 70px; border-radius: 8px;" src="{% static 'images/pexels-2149938750-37161677.jpg' %}" alt="images acte de mariage">
-    <img style="width: 480px; margin-left: 50px; margin-right: 40px; margin-top: 70px; height:325px ; border-radius: 8px;" src="{% static 'images/backgroud img_accueilx.jpeg' %}" alt="images acte de mariage">
+<div class="styleimages"> 
+    <div class="mesimages"> 
+    <img  src="{% static 'images/pexels-2149938750-37161677.jpg' %}" alt="images acte de mariage">
+    <p> </p>
+    </div>
+    <div class="mesimages"> 
+        <img src="{% static 'images/backgroud img_accueilx.jpeg' %}" alt="images acte de mariage">
+<p>Votre acte de mariage certifie officiellement votre union et atteste de votre lien conjugal avec votre épouse.</p>    </div>
+    <div class="mesimages"> 
+        <img src="{% static 'images/mosq1.jpg.webp' %}" alt="">
+       <br> 
+       
+      
+    </div>
+    <button class="buttoncas" id="precedent"> < </button>
+    <button class="buttoncas" id="suivant"> > </button>
+
 </div>
 <br> <br> <br> <br> <br> <br>
 <hr>
@@ -96,7 +111,7 @@
                 
                 <button class="btn-1">  <span style=" font-size: 40px; color: rgb(89, 0, 255);" ;"> 3 </span>   <h3> Paiement & Email
                     </h3>
-                    Payez par Mobile Money. <br> Recevez instantanément votre <br> confirmation par e-mail. </button>
+                    Payez. <br> Recevez instantanément votre <br> confirmation par e-mail. </button>
             </div>
         </div>
     </section>
@@ -156,7 +171,7 @@
 
             <div class="footer-bottom">
                 <div class="fotter-bottom-text"> 
-                   <div class="contact">  
+                   <div class="contact"> 
                     <br> Pour plus d'informations  : +229 01 90 56 75 85                  <hr>
                     </div>
                 <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont

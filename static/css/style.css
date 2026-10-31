@@ -200,12 +200,14 @@ body {
 }
 
 .section-montant{
+    margin-top: 50px;
     border: 1px solid white;
     width: 100%;
     padding: 20px;
     background-color: rgba(0, 255, 255, 0.197);
     box-sizing: border-box;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .section-montant h2 {
@@ -249,30 +251,71 @@ body {
     border: 1px solid white;
     padding: 30px;
     text-align: center;
-    background-color: white;
-    color: rgb(2, 20, 2);
+    background-color: rgba(35, 3, 3, 0.819);
+    color: white;
+    margin-top: 100px;
+
 } 
 
 .contact {
     text-align: left;
     margin-bottom: 12px;
 } 
-
-.mes-images{
+.styleimages{
     display: flex;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(146, 146, 238);
+    background-color: #6b82cf95;
+    margin-bottom: 50px;
+}
+.mesimages{
+    display: none;
     justify-content: center;
+    width:600px;
     gap: 20px;
+    object-fit: cover;
     margin-top: 40px;
     flex-wrap: wrap;
     padding: 0 15px;
+    margin-bottom: 50px;
 }
 
-.mes-images img{
+
+.mesimages{
+    width: 480px;
+     margin-left: 50px;
+     margin-right: 40px; 
+     margin-top: 70px; 
+     height:325px ;
+    border-radius: 8px;
+    display: flex;
+}
+
+.mesimages img{
     width: 100%;
     max-width: 450px;
     height: auto;
     border-radius: 8px;
+
 }
+#precedent{
+    left:10px
+}
+#suivant{
+    right: 10px;
+}
+.buttoncas{
+    position: absolute;
+    top: 50%;
+    transform : translateY(-50%);
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
 
 /* RESPONSIVE POUR TELEPHONES */
 @media(max-width: 768px){
@@ -285,8 +328,11 @@ body {
         padding: 5px;
         border-radius: 5px;
     }
-
+    .styleimages{
+        flex-direction: column;
+    }
     .Hero{
+        display: flexbox;
         flex-direction: column;
         text-align: center;
     }

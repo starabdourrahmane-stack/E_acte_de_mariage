@@ -9,3 +9,26 @@ if (bouton && menu) {
         bouton.setAttribute("aria-expanded", menuOuvert);
     });
 }
+const MesImages =document.querySelectorAll(".mesimages");
+
+let index = 0;
+
+function afficherSlide() {
+        MesImages.forEach((image, i) => {
+            image.style.display = i === index ? "block" : "none";
+        
+        });
+}
+// Boutton droite images suivant 
+
+document.getElementById("suivant").addEventListener("click", function () {
+    index = (index + 1) % MesImages.length;
+    afficherSlide();
+});
+//Boutton gauche images précédent 
+
+document.getElementById("precedent").addEventListener("click", function() {
+    index =(index -1 + MesImages.length) % MesImages.length;
+    afficherSlide();
+});
+afficherSlide();

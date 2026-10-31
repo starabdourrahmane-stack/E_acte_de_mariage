@@ -33,6 +33,7 @@
         </button>
         <nav id="menu" class="menu">
             <a href="{% url 'home' %}"> Accueil </a>
+            <a href="{% url 'accueilx' %}"> Mon espace </a>
             <a href="{% url 'login' %}">  connexion </a>
             <a href="{% url 'signup' %}">  Inscription </a>
             <a href="{% url 'logout' %}">  Déconnexion </a>
@@ -57,8 +58,13 @@
                     <div>
 <a href="{% url 'signature' %}">
     Téléchargez ce document puis signez-le
-</a>                    </div> <br> <br>
-                <div class="btnstyle"> <button type="submit">Valider et Payer</button> </div>
+</a>                    </div>  
+   <br> <br><label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+    <input type="checkbox" required />
+    J'accepte et je confirme que les informations soumises sont correctes.
+</label>
+                <div class="btnstyle"> <button type="submit">Valider et Payer</button> </div> 
+                
             </form>
         </div>
        

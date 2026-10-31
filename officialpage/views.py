@@ -8,10 +8,19 @@ from . import models
 
 def home(request):
     return render (request, 'officialpage/home.html')
+
 @login_required
 def demande(request):
     photos = models.Photo.objects.all()
-    return render(request, 'officialpage/accueilx.html', context={'photos': photos})
+    
+    # On cherche si l'utilisateur connecté a soumis un acte de mariage
+    mon_acte = models.ActeMariage.objects.filter(demandeur=request.user).first()
+    
+    context = {
+        'photos': photos,
+        'mon_acte': mon_acte, # On transmet l'acte au template HTML
+    }
+    return render(request, 'officialpage/accueilx.html', context=context)
 @login_required
 def photo_upload(request):
     form = forms.PhotoForm()

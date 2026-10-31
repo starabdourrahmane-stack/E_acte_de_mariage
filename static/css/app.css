@@ -1,10 +1,6 @@
 
 
-body {
-    background-image: url("../images/backgroud img_accueilx.jpeg");
-    background-size: cover;
-    background-position: center;
-}   
+ 
 .main{
     margin-left:240px;
     padding: 20;
@@ -23,7 +19,20 @@ body {
 }html {
     font-family: Arial;
 }
-
+.container{
+    border : 1px solid white;
+    background-color: rgb(90, 100, 100);
+    padding: 100px;
+    margin-right: 35px;
+    box-shadow: 5px 5px 5px rgb(0,0,0,00.5s);
+    
+}
+.container1{
+    border: 1px solid white;
+    padding: 35px;
+    border-radius: 25px;
+    background-color: white;
+}
 /* The sidebar menu */
 .sidebar {
     height: 100%; /* Full-height: remove this if you want "auto" height */
