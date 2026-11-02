@@ -4,27 +4,45 @@
 {% load static %}
 {% block content %}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatisation des Actes de Mariage Islamique</title>
-    <!-- FontAwesome pour les icônes -->
-    
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <title>Acte de Marige Islamique</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
 </head>
 <body>
-<section class="Navbar-top"> 
-      <nav class="navbar">
+    <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
+
         <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
         <ul>
-            <li> <a href="#">  </a></li>
-            <li> <a href="#"> </a></li>
-            <li> <a href="#">  </a></li>
+            <li> <a href="#Comment ça marche"> Comment ça marche </a></li>
+            <li> <a href="#Coût et délais"> Coût et délais </a></li>
+            <li> <a href="#FAQ"> FAQ </a></li>
 
         </ul>
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
         </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+            <a href="{% url 'accueilx' %}"> Mon espace </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+            <a href="{% url 'signup' %}">  Se déconnecter  </a>
+
+        </nav>
+
     </nav>
+<br>
+        </div>
+        
 </section>
  <br> 
  <section> 
@@ -37,9 +55,10 @@
                  <button> <h6><strong>Date de la demande :</strong> {{ mon_acte.created_at|date:"d/m/Y à H:i" }}</h6>  </button>
               {% if mon_acte %}
                     <<div style="margin-top: 15px; text-align: center;">
-                    <p style="color: green; font-weight: bold;"> Votre demande a été validée avec succès ! </p>
+                    <p style="color: green; font-weight: bold; font-size: 16px;"> Votre demande a été validée avec succès! <br>
+                         et la génération de l'acte de mariage est en cours. </p>
                     <img class="avatar" src="{% static 'images/Green and White Simple Watercolor Page Border A5 (2).png' %}" style="width: 120px; height: 120px; object-fit: cover;" alt="en_cours">
-                    <h5> vous recevez via mail dans un délais de 3 jours votre acte de mariage </h5>
+                    <h5> vous recevez via mail dans un délais de 2 jours votre acte de mariage </h5>
                     <h5>Date du mariage : {{ mon_acte.date_mariage|date:"d/m/Y" }}</h5>
                 {% else %}
                     <div style="margin-top: 15px; text-align: center;">
@@ -76,7 +95,7 @@
                 <br> <a href="{% url 'logout' %}">Se déconnecter</a></p>
         {% endif %} <br> <br>
     </div>   
-   <h2>Photos</h2>
+<!--  <h2>Photos</h2>
     <div class="grid-container">
         {% for photo in photos %}
             <div class="post">
@@ -88,9 +107,28 @@
 </section>
 
 <div class="main">
-</div>  
+</div>  -->
+ <section> <!-- footer-bottom-->
 
-<!-- <section> 
+            <div class="footer-bottom">
+                <div class="fotter-bottom-text"> 
+                   <div class="contact"> 
+                    <br>                   <hr>
+                    </div>
+                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                    chiffrées et hautement protégées.
+                    <br>
+                <div> </div>Mentions légales|
+                Politique de confidentialité|
+
+
+                Contact Support|
+                </p>
+            </div>
+            </div>
+        </section>
+<section> 
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 
     {% endblock content %}

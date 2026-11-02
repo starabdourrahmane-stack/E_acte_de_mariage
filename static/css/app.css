@@ -89,3 +89,30 @@
 }
 
 
+@media (max-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+    .main {
+        margin-left: 0; /* Supprime l'espace réservé à la sidebar pour occuper toute la largeur */
+        padding: 10px;  /* Optionnel : ajuste un peu le padding sur mobile si besoin */
+    }
+    
+    /* Bonus : si tu veux aussi adapter tes images en grille sur mobile */
+    .grid-container {
+        grid-template-columns: auto; /* Passe la grille à une seule colonne sur téléphone */
+    }
+    .container{
+    padding: 100px;
+    margin-right: 35px;
+    }
+
+    
+    .container1{
+    flex-direction: column;
+     padding: 50px;
+     width: 120px;
+     margin-left: -62px;
+    border-radius: 25px;
+    }
+}
