@@ -50,8 +50,10 @@
             
                         <button type="submit">S’inscrire</button>
                     </form>
-                <div class="certificate-img1">
-                </div>
+
+                    <div class="certificate-img">
+                    <img src="{% static 'images/acte de marige back img.png' %}" alt="">
+                    </div>
             </div>
                 <section> <!-- footer-bottom-->
 
@@ -61,8 +63,8 @@
                     chiffrées et hautement protégées.
                     <br>
                 <div> </div>Mentions légales|
-                Politique de confidentialité|
-                Contact Support|
+                 <a style="color: white;" href="{% url 'confidentialite' %}"> Politique de confidentialité</a>|
+                <a style="color: white;" href="{% url 'contact_us' %}"> Contact Support</a>|
                 </p>
             </div>
             </div>

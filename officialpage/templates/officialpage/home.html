@@ -70,6 +70,7 @@
     <div class="mesimages"> 
         <img src="{% static 'images/mosq1.jpg.webp' %}" alt="">
         <p> <strong> Le mariage en Islam </strong> </p>
+        <a href="{% url 'mariage_islam' %}"> En savoir plus  </a>
        <br> 
        
       
@@ -179,10 +180,10 @@
                     chiffrées et hautement protégées.
                     <br>
                 <div> </div>Mentions légales|
-                Politique de confidentialité|
+                <a style="color: white;" href="{% url 'confidentialite' %}">Politique de confidentialité</a>
 
 
-                Contact Support|
+                           <a style="color: white;" href="{% url 'contact_us' %}"> Contact Support</a>|
                 </p>
             </div>
             </div>

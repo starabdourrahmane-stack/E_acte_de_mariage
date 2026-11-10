@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité - Acte de Mariage Islamique</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
+</head>
+<body>
+    <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
+
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+   
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
+
+        </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+             <a href="{% url 'home' %}"> Accueil </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+
+        </nav>
+    </nav>
+
+<section class="contact-page">
+<div class="mainglobal" style="margin-left: 45px;"> 
+    <div class="contact-header">
+        <br> 
+        <h1>Contact & Support</h1>
+        <p>
+            Une question, une difficulté ou besoin d'assistance ?
+            Notre équipe est à votre disposition pour vous accompagner
+            dans vos démarches de mariage islamique.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Informations de contact -->
+        <div class="contact-info">
+
+            <h2>Comment pouvons-nous vous aider ?</h2>
+            <p>
+                N'hésitez pas à nous contacter. Nous ferons de notre
+                mieux pour vous apporter une réponse dans les meilleurs délais.
+            </p>
+
+            <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h3>Adresse e-mail</h3>
+                    <p>Votre adresse e-mail officielle</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">☎</div>
+                <div>
+                    <h3>Téléphone</h3>
+                    <p>Votre numéro de contact</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🕌</div>
+                <div>
+                    <h3>Administration</h3>
+                    <p>Conseil Supérieur de l'Islam au Bénin (CSIB)</p>
+                </div>
+            </div>
+
+            <div class="contact-note">
+                <strong>Besoin d'assistance ?</strong>
+                <p>
+                    Pour un problème lié à votre dossier, pensez à
+                    préciser votre référence de demande dans votre message.
+                </p>
+                <a href="{% url 'home' %}">Retour à la page d'accueil</a>
+            </div>
+
+        </div>
+
+      
+
+    </div>
+</div>
+</section>
+
+{% endblock %}

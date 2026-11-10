@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité - Acte de Mariage Islamique</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
+</head>
+<body>
+    <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
+
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+   
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
+
+        </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+             <a href="{% url 'home' %}"> Accueil </a>
+             <a href="{% url 'accueilx' %}"> Mon espace </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+            <a href="{% url 'logout' %}">  Se déconnecter </a>
+
+        </nav>
+    </nav>
+
+<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    <h2>Politique de confidentialité</h2>
+
+    <h3>Données collectées</h3>
+    <p>Pour établir un acte de mariage, nous collectons : le nom, le prénom, la profession,
+       les pièces d'identité (CIP) et les photos des époux, leurs signatures, les noms des témoins,
+       la dot et la date du mariage. Lors de l'inscription, nous collectons aussi votre nom
+       d'utilisateur, votre adresse e-mail et, si vous l'ajoutez, une photo de profil.</p>
+
+    <h3>Pourquoi ces données ?</h3>
+    <p>Uniquement pour traiter votre demande, établir l'acte, vous l'envoyer et gérer le paiement.
+       Elles ne sont ni vendues ni utilisées à des fins publicitaires.</p>
+
+    <h3>Qui y a accès ?</h3>
+    <p>Vous-même, et les personnes habilitées à traiter les dossiers. Vos fichiers ne sont pas
+       accessibles publiquement : une connexion est nécessaire et chaque fichier n'est visible que
+       par son propriétaire.</p>
+
+    
+
+    <h3>Vos droits</h3>
+    <p>Vous pouvez demander l'accès, la correction ou la suppression de vos données en nous
+       contactant à [0190567585].  System administrator . Vous pouvez aussi demander la suppression de votre compte, ce qui
+       protection des données compétente et la loi applicable au Bénin.</p>
+
+    <p><a href="{% url 'home' %}">Retour à l'accueil</a></p>
+</div>
+{% endblock content %}

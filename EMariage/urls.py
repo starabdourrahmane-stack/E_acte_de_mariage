@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
+from authentication.forms import MonPasswordChangeForm
 from django.conf.urls.static import static
 import officialpage.views 
 import authentication.views
@@ -13,7 +14,9 @@ urlpatterns = [
     path('login/', authentication.views.loginpage, name ='login'),
     path('logout_user', authentication.views.logout_user, name = 'logout'),
 
-    path('change-password/', PasswordChangeView.as_view( template_name='authentication/password_change_form.html'),
+    path('change-password/', PasswordChangeView.as_view( template_name='authentication/password_change_form.html',
+                    form_class= MonPasswordChangeForm,
+                    success_url = '/change-password-done/'),
          name ='password_change'),
     path('change-password-done/', PasswordChangeDoneView.as_view(
         template_name='authentication/password_change_done.html'),
@@ -28,7 +31,9 @@ urlpatterns = [
     path('officialpage/remplissage', officialpage.views.formulaire_Mariage, name ='formulaire'),
     path('payement/', officialpage.views.payer, name= 'payer'),
     path('signature/', officialpage.views.signer, name ='signature'),
-
+    path('confidentialite/', officialpage.views.confidentialite, name='confidentialite'),
+    path('contact_us/', officialpage.views.contact_us, name='contact_us'),
+    path('mariage_islam/', officialpage.views.mariage_islam, name='mariage_islam'),
     ]
 if settings.DEBUG:
     urlpatterns += static(

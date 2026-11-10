@@ -97,3 +97,10 @@ def edit_officialpage(request, official_id):
 
 def signer(request):
     return render(request, 'officialpage/signature.html')
+
+def confidentialite(request):
+    return render(request, 'officialpage/confidentialite.html')
+def contact_us(request):
+    return render(request, 'officialpage/contact.html')
+def mariage_islam(request):
+    return render(request, 'officialpage/mariageislam.html')

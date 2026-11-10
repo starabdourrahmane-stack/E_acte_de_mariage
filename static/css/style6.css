@@ -1,0 +1,386 @@
+
+/* =====================================
+   PAGE : LE MARIAGE EN ISLAM
+===================================== */
+
+.mariage-islam {
+    background: #fff;
+    color: #263c32;
+    line-height: 1.8;
+}
+
+.mariage-islam * {
+    box-sizing: border-box;
+}
+
+.mariage-hero {
+    min-height: 480px;
+    background:
+        linear-gradient(rgba(8, 48, 34, 0.88), rgba(8, 48, 34, 0.80)),
+        url("/static/images/mariage-islam.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 7%;
+    color: white;
+}
+
+.hero-overlay {
+    max-width: 850px;
+}
+
+.hero-label,
+.section-label {
+    color: #bd9b57;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.mariage-hero h1 {
+    font-size: 48px;
+    margin: 15px 0 5px;
+    line-height: 1.3;
+}
+
+.arabic-title {
+    font-size: 29px;
+    color: #e6c77f;
+    margin: 10px 0 20px;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin: auto;
+    color: #e8eee9;
+    font-size: 17px;
+}
+
+.hero-btn,
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left:100px;
+    justify-content: center;
+    padding: 13px 27px;
+    background: #bd9b57;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-btn:hover,
+.cta-btn:hover {
+    background: #a7833e;
+    transform: translateY(-2px);
+}
+
+.mariage-section {
+    padding: 75px 8%;
+}
+
+.mariage-section h2 {
+    font-size: 32px;
+    color: #174b35;
+    text-align: center;
+    margin: 12px 0 25px;
+    line-height: 1.4;
+}
+
+.introduction {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.introduction > p,
+.section-intro {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    color: #68766e;
+}
+
+.verset-card {
+    background: #f4f8f4;
+    border-left: 4px solid #bd9b57;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 35px;
+}
+
+.verset-reference {
+    color: #98773c;
+    font-weight: bold;
+}
+
+.verset-arabe,
+.hadith-arabe {
+    font-size: 26px;
+    line-height: 2;
+    color: #174b35;
+}
+
+.verset-traduction {
+    color: #53645a;
+    font-style: italic;
+}
+
+.verset-card small {
+    color: #888;
+}
+
+.objectifs {
+    background: #f7f9f6;
+    text-align: center;
+}
+
+.objectifs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.objectif-card {
+    background: white;
+    padding: 27px 20px;
+    border-radius: 10px;
+    border: 1px solid #e9eee9;
+    transition: 0.3s;
+}
+
+.objectif-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.objectif-icon {
+    font-size: 35px;
+    color: #bd9b57;
+}
+
+.objectif-card h3,
+.condition-item h3 {
+    color: #174b35;
+    font-size: 18px;
+}
+
+.objectif-card p,
+.condition-item p {
+    color: #68766e;
+    font-size: 14px;
+}
+
+.conditions {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.conditions-list {
+    margin-top: 40px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 22px 10px;
+    border-bottom: 1px solid #e9eee9;
+}
+
+.condition-number {
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf3ec;
+    color: #176443;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.condition-item h3 {
+    margin: 0 0 5px;
+}
+
+.condition-item p {
+    margin: 0;
+}
+
+.droits {
+    background: #f7f9f6;
+    text-align: center;
+}
+
+.droits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.droit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 4px solid #bd9b57;
+}
+
+.droit-card h3 {
+    color: #174b35;
+}
+
+.droit-card ul {
+    padding-left: 20px;
+}
+
+.droit-card li {
+    margin: 12px 0;
+    color: #68766e;
+}
+
+.mutualite-card {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+    background: #eaf3ec;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mutualite-card h3 {
+    color: #174b35;
+}
+
+.hadith-section {
+    background: #174b35;
+    color: white;
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.hadith-section .hadith-arabe {
+    color: #f0d69c;
+    font-size: 27px;
+}
+
+.hadith-translation {
+    max-width: 750px;
+    margin: 20px auto;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.hadith-reference {
+    color: #e6c77f;
+    font-size: 14px;
+}
+
+.etapes {
+    text-align: center;
+}
+
+.etapes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.etape-card {
+    padding: 25px 18px;
+    background: #f7f9f6;
+    border-radius: 9px;
+}
+
+.etape-card > span {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #174b35;
+    color: white;
+    font-weight: bold;
+}
+
+.etape-card h3 {
+    color: #174b35;
+}
+
+.etape-card p {
+    color: #68766e;
+    font-size: 14px;
+}
+
+.mariage-cta {
+    padding: 65px 8%;
+    background: #174b35;
+    color: white;
+    text-align: center;
+}
+
+.mariage-cta h2 {
+    font-size: 30px;
+}
+
+.mariage-cta p {
+    color: #e0eee5;
+}
+
+.cta-btn {
+    background: #bd9b57;
+}
+
+@media (max-width: 900px) {
+    .objectifs-grid,
+    .etapes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mariage-section {
+        padding: 50px 6%;
+    }
+
+    .mariage-hero {
+        min-height: 430px;
+    }
+
+    .mariage-hero h1 {
+        font-size: 34px;
+    }
+
+    .mariage-section h2 {
+        font-size: 25px;
+    }
+
+    .objectifs-grid,
+    .droits-grid,
+    .etapes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .condition-item {
+        gap: 14px;
+    }
+
+    .verset-card {
+        padding: 20px;
+    }
+
+    .verset-arabe,
+    .hadith-arabe {
+        font-size: 22px;
+    }
+}

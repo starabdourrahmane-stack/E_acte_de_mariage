@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité - Acte de Mariage Islamique</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/style6.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
+</head>
+<body>
+    <nav class="navbar">
+            <img  style="width: 150px; height: 100px;" src="{% static 'images/logo.png' %}" alt="logo du site">
+
+        <div class="title-web"> <a class="AMI" style="text-indent: left;"; href="#"> Acte de Marige Islamique </a></div>
+   
+        <div class="title-web-2"> <a class="Active" href="{% url 'login' %}"> Connexion </a>
+
+        </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"> 
+            ☰
+        </button>
+        <nav id="menu" class="menu">
+             <a href="{% url 'home' %}"> Accueil </a>
+            <a href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a>
+
+        </nav>
+    </nav>
+
+<section class="mariage-islam">
+
+    <!-- HERO -->
+    <div class="mariage-hero">
+        <div class="hero-overlay">
+
+            <h1>Le mariage en Islam</h1>
+
+            <p class="arabic-title" dir="rtl">
+                النِّكَاحُ فِي الْإِسْلَامِ
+            </p>
+
+            <p class="hero-description">
+                Le mariage est une alliance noble fondée sur la foi,
+                l'amour, la miséricorde et la responsabilité.
+                Découvrez ses fondements et ses enseignements à la lumière
+                du Coran et de la Sunna.
+            </p>
+
+            <a href="#fondements" class="hero-btn">
+                Découvrir les enseignements
+            </a>
+        </div>
+    </div>
+
+
+    <!-- INTRODUCTION -->
+    <section class="mariage-section introduction" id="fondements">
+
+        <span class="section-label">LES FONDEMENTS</span>
+        <h2>Le mariage, une institution sacrée en Islam</h2>
+
+        <p>
+            En Islam, le mariage (Nikâh) est un engagement solennel
+            entre un homme et une femme, établi dans le respect des
+            prescriptions divines. Il constitue un cadre légitime pour
+            construire une famille, préserver la dignité des époux
+            et vivre ensemble dans la sérénité.
+        </p>
+
+        <div class="verset-card">
+            <span class="verset-reference">Sourate Ar-Rûm, verset 21</span>
+
+            <p class="verset-arabe" dir="rtl">
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ
+                أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ
+                بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+            </p>
+
+            <p class="verset-traduction">
+                « Et parmi Ses signes, Il a créé de vous, pour vous,
+                des épouses afin que vous viviez en tranquillité avec elles
+                et Il a mis entre vous de l'affection et de la bonté. »
+            </p>
+
+            <small>Traduction rapprochée du sens du verset.</small>
+        </div>
+    </section>
+
+
+    <!-- OBJECTIFS -->
+    <section class="mariage-section objectifs">
+
+        <span class="section-label">POURQUOI SE MARIER ?</span>
+        <h2>Les nobles objectifs du mariage</h2>
+
+        <div class="objectifs-grid">
+
+            <article class="objectif-card">
+                <div class="objectif-icon">♡</div>
+                <h3>L'amour et la miséricorde</h3>
+                <p>
+                    Construire une relation fondée sur l'affection,
+                    la compassion, le respect et la bienveillance.
+                </p>
+            </article>
+
+            <article class="objectif-card">
+                <div class="objectif-icon">☪</div>
+                <h3>Préserver sa foi</h3>
+                <p>
+                    S'entraider dans l'obéissance à Allah et avancer
+                    ensemble dans la pratique religieuse.
+                </p>
+            </article>
+
+            <article class="objectif-card">
+                <div class="objectif-icon">⌂</div>
+                <h3>Fonder une famille</h3>
+                <p>
+                    Construire un foyer stable et participer à
+                    l'éducation des enfants dans de bonnes valeurs.
+                </p>
+            </article>
+
+            <article class="objectif-card">
+                <div class="objectif-icon">✧</div>
+                <h3>La tranquillité</h3>
+                <p>
+                    Trouver auprès de son conjoint un soutien,
+                    une compagnie et un apaisement mutuel.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- CONDITIONS -->
+    <section class="mariage-section conditions">
+
+        <span class="section-label">LE CONTRAT DE MARIAGE</span>
+        <h2>Les éléments essentiels du mariage islamique</h2>
+
+        <p class="section-intro">
+            Le mariage islamique repose sur des conditions et des
+            éléments juridiques qui doivent être respectés pour
+            assurer la validité du contrat.
+        </p>
+
+        <div class="conditions-list">
+
+            <div class="condition-item">
+                <span class="condition-number">01</span>
+                <div>
+                    <h3>Le consentement des époux</h3>
+                    <p>
+                        Le mariage doit être conclu avec le consentement
+                        libre des deux futurs époux. Le mariage forcé
+                        n'est pas acceptable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="condition-item">
+                <span class="condition-number">02</span>
+                <div>
+                    <h3>Le tuteur matrimonial (Wali)</h3>
+                    <p>
+                        Le rôle du tuteur matrimonial est prévu dans
+                        les règles du mariage islamique. Les modalités
+                        et certaines conditions font l'objet de divergences
+                        entre les écoles juridiques.
+                    </p>
+                </div>
+            </div>
+
+            <div class="condition-item">
+                <span class="condition-number">03</span>
+                <div>
+                    <h3>La dot (Mahr)</h3>
+                    <p>
+                        La dot est un droit de l'épouse qui lui est
+                        accordé par le mari. Elle peut être constituée
+                        d'un bien ou d'une somme convenue.
+                    </p>
+                </div>
+            </div>
+
+            <div class="condition-item">
+                <span class="condition-number">04</span>
+                <div>
+                    <h3>Les témoins et la publicité</h3>
+                    <p>
+                        Le mariage doit respecter les règles relatives
+                        aux témoins et à sa publicité, selon les
+                        dispositions de l'école juridique suivie.
+                    </p>
+                </div>
+            </div>
+
+            <div class="condition-item">
+                <span class="condition-number">05</span>
+                <div>
+                    <h3>L'absence d'empêchement matrimonial</h3>
+                    <p>
+                        Les futurs époux ne doivent pas être concernés
+                        par un empêchement religieux à la conclusion
+                        du mariage.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DROITS ET DEVOIRS -->
+    <section class="mariage-section droits">
+
+        <span class="section-label">LA VIE CONJUGALE</span>
+        <h2>Les droits et devoirs des époux</h2>
+
+        <div class="droits-grid">
+
+            <div class="droit-card">
+                <h3>Les responsabilités du mari</h3>
+                <ul>
+                    <li>Assurer l'entretien du foyer selon ses moyens et ses obligations.</li>
+                    <li>Traiter son épouse avec bonté et respect.</li>
+                    <li>Protéger la dignité et la sécurité de sa famille.</li>
+                    <li>Faire preuve de justice et de responsabilité.</li>
+                </ul>
+            </div>
+
+            <div class="droit-card">
+                <h3>Les responsabilités de l'épouse</h3>
+                <ul>
+                    <li>Respecter les engagements du mariage.</li>
+                    <li>Préserver la confiance et la dignité du foyer.</li>
+                    <li>Participer à la construction d'une famille équilibrée.</li>
+                    <li>Entretenir une relation fondée sur le respect mutuel.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mutualite-card">
+            <h3>Un engagement réciproque</h3>
+            <p>
+                Le mariage n'est pas uniquement une liste de droits
+                et d'obligations. C'est également une coopération
+                fondée sur la bienveillance, la consultation,
+                la patience et le respect mutuel.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- HADITH -->
+    <section class="hadith-section">
+
+        <span class="section-label">LA SUNNA DU PROPHÈTE ﷺ</span>
+
+        <p class="hadith-arabe" dir="rtl">
+            خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ وَأَنَا خَيْرُكُمْ لِأَهْلِي
+        </p>
+
+        <p class="hadith-translation">
+            « Le meilleur d'entre vous est celui qui est le meilleur
+            envers sa famille, et je suis le meilleur d'entre vous
+            envers ma famille. »
+        </p>
+
+        <span class="hadith-reference">
+            Rapporté par At-Tirmidhî
+        </span> <br> <br> <br> <br>
+<a href="{% url 'signup' %}" class="cta-btn">
+            Commencer ma demande
+        </a>
+    </section>
+ 
+
+    </section>
+  <section> <!-- footer-bottom-->
+
+            <div class="footer-bottom">
+                <div class="fotter-bottom-text"> 
+                   <div class="contact"> 
+                    <br> Pour plus d'informations  : +229 01 90 56 75 85                  <hr>
+                    </div>
+                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                    chiffrées et hautement protégées.
+                    <br>
+                <div> </div>Mentions légales|
+                <a style="color: white;" href="{% url 'confidentialite' %}">Politique de confidentialité</a>
+
+
+                           <a style="color: white;" href="{% url 'contact_us' %}"> Contact Support</a>|
+                </p>
+            </div>
+            </div>
+        </section>
+{% endblock %}

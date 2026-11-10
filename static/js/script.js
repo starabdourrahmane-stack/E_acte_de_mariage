@@ -32,3 +32,4 @@ document.getElementById("precedent").addEventListener("click", function() {
     afficherSlide();
 });
 afficherSlide();
+

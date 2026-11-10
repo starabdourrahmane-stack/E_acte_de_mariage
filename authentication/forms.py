@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from . import models
+from django.contrib.auth.forms import PasswordChangeForm
+
 from django.contrib.auth.forms import UserCreationForm
 class LoginForm(forms.Form):
     username = forms.CharField(max_length = 63, label = 'Nom dutilisateur')
@@ -22,3 +24,18 @@ class UploadProfilePhotoForm(forms.ModelForm):
     class Meta:
         model = get_user_model()
         fields =['profile_photo']
+
+class MonPasswordChangeForm(PasswordChangeForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['old_password'].label = "Ancien mot de passe"
+
+        self.fields['new_password1'].label = "Nouveau mot de passe"
+
+        self.fields['new_password2'].label = "Confirmer le nouveau mot de passe"
+
+        self.fields['new_password1'].help_text = (
+            "Votre mot de passe doit contenir au moins 8 caractères."
+        )

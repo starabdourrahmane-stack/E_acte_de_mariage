@@ -57,15 +57,21 @@
         <div class="contenuhero">
            <h2> Se connecter </h2>
          	<p> {{ message }}</p>
-
+<!--  -->
            <form  class="formul" method="POST">
-		    {{ form.as_p }}
+            {{ form.as_p }}
 		    {% csrf_token %}
 		    <button type="submit"> se connecter	</button>
+
+
+            
                 <p>Pas encore membre ? <a href="{% url 'signup' %}">Inscrivez-vous maintenant !</a></p>
                 <p> Mot de passe oublié ? <a href="{% url 'password_change' %}"> changer le mot de passe </a></p>
             </form>
         </div>
+
+
+      
         <div class="certificate-img">
             <img src="{% static 'images/acte de marige back img.png' %}" alt="">
         </div>

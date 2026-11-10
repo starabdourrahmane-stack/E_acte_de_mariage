@@ -115,4 +115,11 @@
      margin-left: -62px;
     border-radius: 25px;
     }
+    .profil{
+    display: none;
+}
+.profil img{
+    display: none;
+    width: 150px;
+}
 }
