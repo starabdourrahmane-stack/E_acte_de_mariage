@@ -1,0 +1,125 @@
+
+
+ 
+.main{
+    margin-left:240px;
+    padding: 20;
+    color :rgb(31, 17, 17);
+} 
+.main h1{
+    font-size: 35px;
+    text-align: center;
+}
+.main button{
+    text-align: center;
+}
+.main p{
+    font-size: 25px;
+    text-align: center;
+}html {
+    font-family: Arial;
+}
+.container{
+    border : 1px solid white;
+    background-color: rgb(90, 100, 100);
+    padding: 100px;
+    margin-right: 35px;
+    box-shadow: 5px 5px 5px rgb(0,0,0,00.5s);
+    
+}
+.container1{
+    border: 1px solid white;
+    padding: 35px;
+    border-radius: 25px;
+    background-color: white;
+}
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 220px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #1d3030;
+    color:  #ffffe6;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* The navigation menu links */
+.sidebar a {
+    text-decoration: none;
+    color:  #ffffe6;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 240px; /* Same as the width of the sidebar */
+    padding: 20px;
+}
+
+.avatar {
+    width: 80%;
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.post img {
+    width: 80%;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+    .main {
+        margin-left: 0; /* Supprime l'espace réservé à la sidebar pour occuper toute la largeur */
+        padding: 10px;  /* Optionnel : ajuste un peu le padding sur mobile si besoin */
+    }
+    
+    /* Bonus : si tu veux aussi adapter tes images en grille sur mobile */
+    .grid-container {
+        grid-template-columns: auto; /* Passe la grille à une seule colonne sur téléphone */
+    }
+    .container{
+    padding: 100px;
+    margin-right: 35px;
+    }
+
+    
+    .container1{
+    flex-direction: column;
+     padding: 50px;
+     width: 120px;
+     margin-left: -62px;
+    border-radius: 25px;
+    }
+    .profil{
+    display: none;
+}
+.profil img{
+    display: none;
+    width: 150px;
+}
+}

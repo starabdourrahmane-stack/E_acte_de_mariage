@@ -15,9 +15,7 @@
 
 .mariage-hero {
     min-height: 480px;
-    background:
-        linear-gradient(rgba(8, 48, 34, 0.88), rgba(8, 48, 34, 0.80)),
-        url("/static/images/mariage-islam.jpg") center/cover no-repeat;
+    
     display: flex;
     align-items: center;
     justify-content: center;

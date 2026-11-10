@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(236, 236, 189);
+}
+.changephoto{
+    border: 1px solid white;
+    background-color: rgba(0, 128, 96, 0.77);
+    margin: 35px 35px;
+
+}
