@@ -1,0 +1,15 @@
+# Fichiers secrets
+.env
+
+# Environnement virtuel
+env/
+venv/
+
+# Bases de données et exports locaux
+*.sqlite3
+data.json
+datadump.json
+
+# Fichiers temporaires Python
+__pycache__/
+*.py[cod]
