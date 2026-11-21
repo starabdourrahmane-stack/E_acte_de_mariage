@@ -33,15 +33,7 @@
             <a href="{% url 'login' %}">  Commencer la demande </a>
             <a href="{% url 'signup' %}">  Inscription </a>
         </nav>
-<!-- <select onchange="if (this.value) window.location.href=this.value;">
-    <option value="">-- Navigation --</option>
 
-    <option value="#Comment ça marche">comment ça marche </option>
-    <option value="#Coût et délais"> Coût et délais</option>
-    <option value="#FAQ"> FAQ</option>
-    <option value="{% url 'login' %}">  commencer la demande </a></option>
-    <option value="{% url 'signup' %}">  inscription  </a></option>
-</select>  -->        
 
     </nav>
 
@@ -66,7 +58,7 @@
     </div>
     <div class="mesimages"> 
         <img src="{% static 'images/backgroud img_accueilx.jpeg' %}" alt="images acte de mariage">
-<p>Votre acte de mariage certifie officiellement votre union et atteste de votre lien conjugal avec votre épouse.</p>    </div>
+    <p>Votre acte de mariage certifie officiellement votre union et atteste de votre lien conjugal avec votre épouse.</p>    </div>
     <div class="mesimages"> 
         <img src="{% static 'images/mosq1.jpg.webp' %}" alt="">
         <p> <strong> Le mariage en Islam </strong> </p>
@@ -176,16 +168,14 @@
                    <div class="contact"> 
                     <br> Pour plus d'informations  : +229 01 90 56 75 85                  <hr>
                     </div>
-                <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
+                <p>  Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
                     chiffrées et hautement protégées.
                     <br>
                 <div> </div>Mentions légales|
                 <a style="color: white;" href="{% url 'confidentialite' %}">Politique de confidentialité</a>
-
-
-                           <a style="color: white;" href="{% url 'contact_us' %}"> Contact Support</a>|
+                    <a style="color: white;" href="{% url 'contact_us' %}"> Contact Support</a>|
                 </p>
-            </div>
+                </div>
             </div>
         </section>
 <script src="{% static 'js/script.js' %}"></script>

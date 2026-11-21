@@ -5,7 +5,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 from django.contrib.auth.forms import UserCreationForm
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length = 63, label = 'Nom dutilisateur')
+    username = forms.CharField(max_length = 63, label = "Nom de l'utilisateur")
     password = forms.CharField(max_length = 63, widget= forms.PasswordInput,  label = 'Mot de passe')
 
 

@@ -48,7 +48,7 @@
             <br> <br>
             <div class="paid"> 
     <h2> Passons au paiement Très cher(e)! {{ user }}</h2> 
-      <button id="pay-btn" style="padding: 28px; font-size: 30px; border-radius: 2px;">Payer 100 FCFA</button>
+      <button id="pay-btn" style="padding: 28px; font-size: 30px; border-radius: 2px;">Payer 5000 FCFA</button>
 
       
 <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7">
@@ -65,8 +65,8 @@
       FedaPay.init({
         public_key: 'pk_live_I5KE2yPN_iqiD0OgKV5S_T8f',
         transaction:{
-            amount:100,
-            description: "Paiement du dossier d'Acte de Mariage Islamique du couple {{ nom_marie }} {{ nom_epouse }}",
+            amount:5000,
+            description: "Paiement du dossier d'Acte de Mariage Islamique du couple {{ nom_marie }} {{ nom_epouse }}"
         },
         container: '#embed'
 
@@ -76,9 +76,9 @@
             </section>
     <p>  </p>
                 <br> <a  href="{% url 'logout' %}">Se déconnecter</a></p>
-                <section> <!-- footer-bottom-->
 
-            <div class="footer-bottom">
+</section>
+               <div class="footer-bottom">
                 <div class="fotter-bottom-text"> 
                    <div class="contact"> 
                     <br>                   <hr>
@@ -86,16 +86,15 @@
                 <p> Acte de mariage islamique -- CSIB. © 2026 Tous droits réservés. Vos données de mariage sont
                     chiffrées et hautement protégées.
                     <br>
-                <div> </div>Mentions légales|
+                 Mentions légales|
                 <a style="color: white;" href="{% url 'confidentialite' %}">Politique de confidentialité</a>
-
-
-                Contact Support|
+                <a href="{% url 'contact_us' %}"> Contact Support</a>|
                 </p>
             </div>
             </div>
-        </section>
-{% endblock content %}
-</div>
+</section>
+
+
 
 </body>
+{% endblock content %}

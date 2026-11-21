@@ -51,7 +51,7 @@
 .hero-description {
     max-width: 720px;
     margin: auto;
-    color: #e8eee9;
+    color: #0f2913;
     font-size: 17px;
 }
 
@@ -63,7 +63,7 @@
     justify-content: center;
     padding: 13px 27px;
     background: #bd9b57;
-    color: #fff;
+    color: #1e1a1a;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
