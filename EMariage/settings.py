@@ -81,7 +81,25 @@ WSGI_APPLICATION = 'EMariage.wsgi.application'
 import os
 from dotenv import load_dotenv
 load_dotenv()
-DATABASES = {
+import os
+import dj_database_url
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+if DATABASE_URL:
+    # Sur Render : PostgreSQL
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600),
+    }
+else:
+    # Sur ton ordinateur : SQLite
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        },
+    }
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ.get('DB_NAME', 'emai'),
@@ -94,7 +112,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 STORAGES = {
     "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
