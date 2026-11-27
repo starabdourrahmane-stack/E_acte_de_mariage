@@ -23,8 +23,7 @@ class FromMariage(forms.ModelForm):
         fields = ['nom_marie', 'prenom_marie', 'cip_marie', 'image_epoux', 'nom_epouse', 'prenom_epouse', 
                   'image_epouse','cip_epouse','dot','date_mariage','temoin_1','temoin_2','profession_epoux',
             'profession_epouse',
-            'signature_du_mari',
-            'signature_de_la_mariee',
+           
 
                   ]
         widgets = {

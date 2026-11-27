@@ -57,6 +57,7 @@
                     <img class="avatar" src="{% static 'images/Green and White Simple Watercolor Page Border A5 (2).png' %}" style="width: 120px; height: 120px; object-fit: cover;" alt="en_cours">
                     <h5> vous recevez via mail dans un délais de 2 jours votre acte de mariage </h5>
                     <h5>Date du mariage : {{ mon_acte.date_mariage|date:"d/m/Y" }}</h5>
+                     <p>Numéro de l'acte : {{ mon_acte.numero }}</p>
                 {% else %}
                     <div style="margin-top: 15px; text-align: center;">
                     <p> Aucune demande ! </p>

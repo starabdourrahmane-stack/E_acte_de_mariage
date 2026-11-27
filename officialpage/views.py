@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
+from django.conf import settings
+
 
 from . import forms
 from . import models
@@ -67,12 +69,18 @@ def formulaire_Mariage(request):
             acte = form.save(commit=False)
             acte.demandeur = request.user
             acte.save()
-            return redirect('payer')
+            return redirect('payement')
     return render(request, 'officialpage/formulaire.html',
                 context={'form':form } )
 @login_required
 def payer(request):
-    return render(request, 'officialpage/payer.html')
+    if paiement_reussi:
+            #  enregistre l'achat et envoie moi le mail de l'utiliateur
+            notifier_achat(request.user, acte)
+            return redirect('accueilx')
+
+    return render(request, 'payer.html', {'acte': acte})
+    return render(request, 'officialpage/payer.html', {'fedapay_public_key':settings.FEDAPAY_PUBLIC_KEY, 'fedapay_amount':settings.FEDAPAY_AMOUNT,})
 @login_required
 def edit_officialpage(request, official_id):
     official = get_object_or_404(models.Blog, id = official_id)

@@ -10,7 +10,6 @@ def logout_user(request):
     
     logout(request)
     return redirect('home')
-    
 def loginpage(request):
     form = forms.LoginForm()
     message =''
@@ -18,7 +17,7 @@ def loginpage(request):
         form = forms.LoginForm(request.POST)
         if form.is_valid():
             user = authenticate(
-                username =form.cleaned_data['username'],
+                username =form.cleaned_data['email'],
                 password = form.cleaned_data ['password'],               
                    )
             if user is not None:

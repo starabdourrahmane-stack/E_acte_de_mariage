@@ -5,9 +5,8 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 from django.contrib.auth.forms import UserCreationForm
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length = 63, label = "Nom de l'utilisateur")
-    password = forms.CharField(max_length = 63, widget= forms.PasswordInput,  label = 'Mot de passe')
-
+    email = forms.EmailField(label='Adresse e-mail')
+    password = forms.CharField(max_length=63, widget=forms.PasswordInput, label='Mot de passe')
 
 class SingForm(UserCreationForm):
     username = forms.CharField(label= "Nom de l'utilisateur" )
@@ -15,7 +14,9 @@ class SingForm(UserCreationForm):
     email = forms.EmailField(label='Email')
     password1  = forms.CharField(widget= forms.PasswordInput, label="Mot de passe")
     password2  = forms.CharField(widget= forms.PasswordInput, label="Confirmer le mot de  passe")
-
+    def clean_username(self):
+        return self.cleaned_data['username']
+    
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
         fields = ['username', 'email', 'last_name', 'password1', 'password2']

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
+from decouple import config
 from pathlib import Path
 LOGIN_URL = 'login'
 
@@ -130,7 +131,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+FEDAPAY_PUBLIC_KEY = os.getenv("FEDAPAY_PUBLIC_KEY")
+FEDAPAY_AMOUNT = int(os.getenv("FEDAPAY_AMOUNT", "5000"))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
@@ -146,3 +148,12 @@ LOGIN_REDIRECT_URL = '/accueilx/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT ='media/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Envoie de mails après paiement réussi
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

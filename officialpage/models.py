@@ -1,6 +1,11 @@
 from django.db import models
 from django.conf import settings
 from django.core.validators import FileExtensionValidator
+import uuid
+import qrcode
+from io import BytesIO
+from django.core.files import File
+from  django.db import models
 # Create your models here.
 
 class Photo(models.Model):
@@ -110,6 +115,6 @@ class ActeMariage(models.Model):
             max_length=100, verbose_name="Nom et prénom du témoin 3(pas obligatoire)",
         blank=False, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return f'Acte de mariage : {self.nom_marie} & {self.nom_epouse}'
+@property
+def numero(self):
+    return f"ACTE-{self.id:06d}"
