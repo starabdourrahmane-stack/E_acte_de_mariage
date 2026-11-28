@@ -11,12 +11,13 @@ margin-bottom: 40px;
 .form-Wedding{
     display: flex;
     gap: 60px;
+    justify-content: center;
 }
 .class-forms{
     margin-top: 25px;
     margin-bottom: 25px;
     border: 1px solid white;
-    background-color: white;
+    background-color: rgb(233, 232, 240);
     margin-left: 12px;
     padding: 20px;
     box-shadow: 4px 5px 5x rgba(0, 0, 0, 0.2);

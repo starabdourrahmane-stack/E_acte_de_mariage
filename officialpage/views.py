@@ -72,14 +72,18 @@ def formulaire_Mariage(request):
             return redirect('payement')
     return render(request, 'officialpage/formulaire.html',
                 context={'form':form } )
+def identification(request, id):
+    acte =ActeMariage.objects.get(id=id)
+    resultat = acte.identification(id)
+    return render(request, 'officialpage/exemple.html', {'resultat':resultat})
 @login_required
 def payer(request):
-    if paiement_reussi:
-            #  enregistre l'achat et envoie moi le mail de l'utiliateur
-            notifier_achat(request.user, acte)
-            return redirect('accueilx')
+    if request.method =='POST':
+        #  enregistre l'achat et envoie moi le mail de l'utiliateur
+        notifier_achat(request.user, acte)
+        return redirect('accueilx')
 
-    return render(request, 'payer.html', {'acte': acte})
+    return render(request, 'officialpage/payer.html')
     return render(request, 'officialpage/payer.html', {'fedapay_public_key':settings.FEDAPAY_PUBLIC_KEY, 'fedapay_amount':settings.FEDAPAY_AMOUNT,})
 @login_required
 def edit_officialpage(request, official_id):
@@ -102,7 +106,6 @@ def edit_officialpage(request, official_id):
         'delete_form': delete_form,
     }
     return render(request, 'officialpage/edit_officialpage.html', context =context)
-
 def signer(request):
     return render(request, 'officialpage/signature.html')
 

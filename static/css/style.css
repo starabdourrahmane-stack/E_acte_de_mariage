@@ -297,6 +297,16 @@ body {
     max-width: 450px;
     height: auto;
     border-radius: 8px;
+    margin-bottom: 25px;
+    transition : transform 0.8s ease-in-out;
+
+}
+.mesimages img:hover{
+    transform : rotate(3deg);
+    border : solid rgb(255, 255, 255) 5px;
+    height: 335px;
+    
+    
 
 }
 #precedent{
@@ -314,6 +324,9 @@ body {
     border: none;
     background: rgba(0, 0, 0, 0.6);
     color: white;
+}
+.paid{
+margin-top: 100px;
 }
 
 

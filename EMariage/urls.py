@@ -1,8 +1,10 @@
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
+from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+
 from django.conf.urls.static import static
 import officialpage.views 
 import authentication.views
@@ -19,6 +21,7 @@ urlpatterns = [
         template_name='authentication/password_change_done.html'),
          name='password_change_done'
          ),
+    path('', include('django.contrib.auth.urls')),
     path('accueilx/', officialpage.views.demande, name ='accueilx'),
     path('signup/', authentication.views.Sing_up, name ='signup'),
     path('upload/', officialpage.views.photo_upload, name='upload'),
@@ -31,7 +34,45 @@ urlpatterns = [
     path('confidentialite/', officialpage.views.confidentialite, name='confidentialite'),
     path('contact/', officialpage.views.contact_us, name='contact_us'),
     path('signer/', officialpage.views.signer, name='signature'),
-    ]
+    path('identification/', officialpage.views.identification, name= 'exemple'),
+    
+    path(
+        'password-reset/',
+        PasswordResetView.as_view(
+            template_name='authentication/password_reset.html',
+            email_template_name='authentication/password_reset_email.txt',
+            subject_template_name='authentication/password_reset_subject.txt',
+            success_url='/password-reset/done/'
+        ),
+        name='password_reset'
+    ),
+
+    path(
+        'password-reset/done/',
+        PasswordResetDoneView.as_view(
+            template_name='authentication/password_reset_done.html'
+        ),
+        name='password_reset_done'
+    ),
+
+    path(
+        'reset/<uidb64>/<token>/',
+        PasswordResetConfirmView.as_view(
+            template_name='authentication/password_reset_confirm.html',
+            success_url='/reset/done/'
+        ),
+        name='password_reset_confirm'
+    ),
+
+    path(
+        'reset/done/',
+        PasswordResetCompleteView.as_view(
+            template_name='authentication/password_reset_complete.html'
+        ),
+        name='password_reset_complete'
+    ),
+]
+    # Restauration du mot de passe en cas d'oublie
 if settings.DEBUG:
     urlpatterns += static(
         settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

@@ -28,10 +28,12 @@
         </button>
         <nav id="menu" class="menu">
              <a href="{% url 'home' %}"> Accueil </a>
-             <a href="{% url 'accueilx' %}"> Mon espace </a>
-            <a href="{% url 'login' %}">  Se connecter  </a>
-            <a href="{% url 'signup' %}">  Inscription </a>
-            <a href="{% url 'logout' %}">  Se déconnecter </a>
+             <a style="color: blue;" href="{% url 'accueilx' %}"> Mon espace → </a>
+            <a  href="{% url 'login' %}">  Se connecter  </a>
+            <a href="{% url 'signup' %}">  Inscription </a> <br> <br>
+                <br>
+            <a style="color: red"  href="{% url 'logout' %}">  Se déconnecter ←  </a>
+
 
         </nav>
 <!-- <select onchange="if (this.value) window.location.href=this.value;">
@@ -48,21 +50,17 @@
     </nav>
             <br> <br>
             <div class="paid"> 
-    <h2> Passons au paiement Très cher(e)! {{ user }}</h2> 
+    <h2> Passons au paiement </h2> 
       <button id="pay-btn" style="padding: 28px; font-size: 30px; border-radius: 2px;">Payer 5000 FCFA</button>
 
       
-<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7">
-
-</script>
-      
-            
-  <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
-</head>
+        <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"> </script>
+        <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+        </head>
 <body>
 
     <div id="embed" style=" width:500px; height:500px; justify-content: center;" > </div>
-  <script type="text/javascript">
+    <script type="text/javascript">
       FedaPay.init({
         public_key: '{{ fedapay_public_key }}',
         transaction:{
@@ -74,10 +72,12 @@
     });
 
   </script>
-            </section>
+            
+        </div>
+        </section>
 
     <p>  </p>
-                <br> <a  href="{% url 'logout' %}">Se déconnecter</a></p>
+                <br> <a style="color: red;" href="{% url 'logout' %}">Se déconnecter</a></p>
 
 </section>
                <div class="footer-bottom">

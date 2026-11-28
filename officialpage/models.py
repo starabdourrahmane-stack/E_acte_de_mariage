@@ -24,6 +24,12 @@ class Blog(models.Model):
         on_delete =models.CASCADE)
     date_created =models.DateTimeField(auto_now_add =True)
     starred = models.BooleanField(default=False)
+    
+class PhotoActeMariage(models.Model):
+    generer = models.ImageField()
+    caption = models.CharField(max_length =128, blank=True)
+    uploader = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete =models.CASCADE)
+    data_created = models.DateTimeField(auto_now_add =True)
 
 # Liste des extensions autorisées (Images + PDF)
 VALID_IMAGE_EXTENSIONS = ['pdf', 'jpg', 'jpeg', 'png']
@@ -115,6 +121,7 @@ class ActeMariage(models.Model):
             max_length=100, verbose_name="Nom et prénom du témoin 3(pas obligatoire)",
         blank=False, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-@property
-def numero(self):
-    return f"ACTE-{self.id:06d}"
+#@property
+def identification(self,id):
+    id = self.id
+    return id

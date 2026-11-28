@@ -29,9 +29,9 @@
         <nav id="menu" class="menu">
             <a href="#Comment ça marche">Comment ça marche </a>
             <a href="#Coût et délais"> Coût et délais </a>
-            <a href="#FAQ"> Question ? </a>
-            <a href="{% url 'login' %}">  Commencer la demande </a>
-            <a href="{% url 'signup' %}">  Inscription </a>
+            <a href="#FAQ"> Question ? </a> <br>
+            <a style="color: blue" href="{% url 'login' %}">  Se connecter  → </a>
+            <a  style="color: blue" href="{% url 'signup' %}">  Inscription </a>
         </nav>
 
 
@@ -44,10 +44,10 @@
                 rapide et totalement sécurisée. Reçu officiel envoyé directement par e-mail. <br>
                 Délivré sous l'autorité du Président du Conseil Supérieur de l'Islam au Bénin (CSIB) <br> <br> <br> <br>
                 <button style="border: 1px solid rgb(138, 23, 23); padding: 8px; width: 400px;; background-color: rgb(233, 240, 233);">
-                     <a style="color: black; font-weight: 500; font-size: 24px; text-decoration: none;" href="{% url 'login' %}"> Commencer la demande -> </a></button>
+                     <a style="color: black; font-weight: 500; font-size: 24px; text-decoration: none;" href="{% url 'login' %}"> Commencer la demande → </a></button>
         </div>
         <div class="certificate-img">
-            <img src="{% static 'images/acte de marige back img.png' %}" alt="">
+            <img src="{% static 'images/acte de marige back img.png' %}" alt="image acte">
         </div>
     </div>
 <hr>
@@ -83,12 +83,13 @@
     <section id="Comment ça marche" > <!-- Comment ça marche -->
 
         <div class="procedure">
-            <h1 style=" text-align: center; padding-top: 18px;">
-                Une procédure simple et transparente <br>
+            <h1 style=" text-align: center; padding-top: 18px;">  Une procédure simple et transparente <br> </h1>
+               
                 <p style="text-align: center; font-size: 16px;">
-                    suivez les 3 étapes pour officialiser votre demande d'acte de mariage
+                    Vous voulez demandez un acte de mariage et vous voulez savoir comment procéder ? <br>
+                    suivez les trois étapes  suivantes: 
                 </p>
-            </h1>
+           
             <div class="buttons">
                 <button class="btn-1"> <span style=" font-size: 40px; color: rgb(89, 0, 255);" ;"> 1 </span>  <h3> Connexion</h3>
                     Créez votre compte rapidement <br> pour sécuriser vos données <br> et suivre votre dossier.
